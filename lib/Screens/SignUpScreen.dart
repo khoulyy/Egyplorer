@@ -7,10 +7,15 @@ import 'package:project/Widgets/CustomTextField.dart';
 import 'package:project/constants/keys.dart';
 
 class SignUpScreen extends StatelessWidget {
-   SignUpScreen({super.key});
+  SignUpScreen({super.key});
   static String id = 'SignUpScreen';
-  String? email,password;
-    GlobalKey<FormState> formKey = GlobalKey();
+  String? email;
+  String? password = '';
+  String? confirmPassword = '';
+  final GlobalKey<FormState> formKey = GlobalKey();
+  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController confirmPasswordController =
+      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -45,8 +50,8 @@ class SignUpScreen extends StatelessWidget {
                   const SizedBox(
                     height: 5,
                   ),
-                  Row(
-                    children: const [
+                  const Row(
+                    children: [
                       Text(
                         '           Email',
                         style: TextStyle(
@@ -54,31 +59,34 @@ class SignUpScreen extends StatelessWidget {
                             fontSize: 20,
                             fontWeight: FontWeight.bold),
                       ),
-                     
                     ],
                   ),
-                                      const SizedBox(
-                    height: 10,
-                  ),
-            
-                  CustomTextField(
-                    onChanged: (data) {
-                      email=data;
-                    },
-                      hintColor: Colors.black,
-                      hintText: 'enter your email',
-                      prefixIcon: const Icon(Icons.email),
-                      height: 45,
-                      width: 300,
-                      borderRadius: 5,
-                      hintSize: 15,
-                      ),
                   const SizedBox(
                     height: 10,
                   ),
-                  
-                  Row(
-                    children: const [
+                  CustomTextField(
+                    onChanged: (data) {
+                      email = data;
+                    },
+                    validator: (data) {
+                      if (data!.isEmpty) {
+                        return 'an email is required';
+                      }
+                      return null;
+                    },
+                    hintColor: Colors.black,
+                    hintText: 'enter your email',
+                    prefixIcon: const Icon(Icons.email),
+                    height: 45,
+                    width: 300,
+                    borderRadius: 5,
+                    hintSize: 15,
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Row(
+                    children: [
                       Text(
                         '           password',
                         style: TextStyle(
@@ -91,10 +99,17 @@ class SignUpScreen extends StatelessWidget {
                   const SizedBox(
                     height: 10,
                   ),
-                     CustomTextField(
-                      onChanged:(data) {
-                        password=data;
-                      },
+                  CustomTextField(
+                    controller: passwordController,
+                    onChanged: (val) {
+                      password = val;
+                    },
+                    validator: (val) {
+                      if (val!.isEmpty) {
+                        return 'password is required';
+                      }
+                      return null;
+                    },
                     hintColor: Colors.black,
                     hintText: 'enter your password',
                     prefixIcon: const Icon(Icons.password),
@@ -102,11 +117,12 @@ class SignUpScreen extends StatelessWidget {
                     width: 300,
                     borderRadius: 5,
                     hintSize: 15,
-                  ),   
-                  const SizedBox(height: 10,),             
-                  
-                  Row(
-                    children: const [
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Row(
+                    children: [
                       Text(
                         '           confirm password',
                         style: TextStyle(
@@ -116,11 +132,22 @@ class SignUpScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-            
                   const SizedBox(
                     height: 10,
                   ),
                   CustomTextField(
+                    controller: confirmPasswordController,
+                    onChanged: (val) {
+                      confirmPassword = val;
+                    },
+                    validator: (val) {
+                      if (val!.isEmpty) {
+                        return 'password is required';
+                      } else if (val != passwordController) {
+                        return 'password does not match';
+                      }
+                      return null;
+                    },
                     hintColor: Colors.black,
                     hintText: 'confirm your password',
                     prefixIcon: const Icon(Icons.password),
@@ -133,40 +160,31 @@ class SignUpScreen extends StatelessWidget {
                     height: 15,
                   ),
                   ButtonWidget(
-                    onPressed: () async{
-            if (formKey.currentState!.validate()) {
-  try {
-              await registerUser();
-                                    Navigator.pushNamed(context, SignUpStep3Screen.id);
+                    onPressed: () async {
+                      if (formKey.currentState!.validate()) {
+                        try {
+                          await registerUser();
 
-            } on FirebaseAuthException catch (ex) {
-              if (ex.code == 'weak-password') {
-                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('weak password')));
-              } else if (ex.code == 'email-already-in-use') {
-                ScaffoldMessenger.of(context).showSnackBar(const SnackBar
-                
-                (
-                  backgroundColor: Colors.lightBlue, 
-                   content: Text('email already in use')));
-              }
-            } catch (ex) {
-              print(ex);
-            }  ScaffoldMessenger.of(context)
-                .showSnackBar(const SnackBar(
-                  
-                  backgroundColor: Colors.lightBlue,
-                  content: Text('success')));
-                 
-}else {
-  
-}
-                      
+                          Navigator.pushNamed(context, SignUpStep3Screen.id);
+                        } on FirebaseAuthException catch (ex) {
+                          if (ex.code == 'weak-password') {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(content: Text('weak password')));
+                          } else if (ex.code == 'email-already-in-use') {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                                const SnackBar(
+                                    content: Text('email already in use')));
+                          }
+                        } catch (ex) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(
+                                  content: Text('there was an error ')));
+                        }
+                      } else {}
                     },
                     height: 60,
                     width: 158,
-                   
                     text: 'Sign up',
-                   
                     fontSize: 20,
                   ),
                   const SizedBox(
@@ -202,8 +220,8 @@ class SignUpScreen extends StatelessWidget {
   }
 
   Future<void> registerUser() async {
-     final credential = await FirebaseAuth.instance
-        .createUserWithEmailAndPassword(
+    final credential =
+        await FirebaseAuth.instance.createUserWithEmailAndPassword(
       email: email!,
       password: password!,
     );

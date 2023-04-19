@@ -9,60 +9,51 @@ import '../Widgets/ButtonWidget.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
-static  String id= 'CartScreen';
+  static String id = 'CartScreen';
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       bottomNavigationBar: const NavBarWidget(),
-      appBar: const PreferredSize(preferredSize: kPreferredSize, child: AppBarWidget()),
+      appBar: const PreferredSize(
+        preferredSize: kPreferredSize,
+        child: AppBarWidget(),
+      ),
       body: Column(
         children: [
           Expanded(
             child: ListView(
-              children:  [
+              children: [
                 const ActivityWidget(),
                 const ActivityWidget(),
-                  const ActivityWidget(),
-                  const ActivityWidget(),
-                  const ActivityWidget(),
-                  const ActivityWidget(),
-                  const ActivityWidget(),
-                  const ActivityWidget(),
-                  const ActivityWidget(),
-                  const ActivityWidget(),
-                  const ActivityWidget(),
-                  const ActivityWidget(),
-                  const ActivityWidget(),
-                  const ActivityWidget(),
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 20),
-                    child: ButtonWidget(
-                      onPressed: () {
-                        Navigator.pushNamed(context, PaymentScreen.id);
-                      },
-                    height: 100  ,
+                const ActivityWidget(),
+                const ActivityWidget(),
+                const ActivityWidget(),
+                const ActivityWidget(),
+                const ActivityWidget(),
+                const ActivityWidget(),
+                const ActivityWidget(),
+                const ActivityWidget(),
+                const ActivityWidget(),
+                const ActivityWidget(),
+                const ActivityWidget(),
+                const ActivityWidget(),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 20),
+                  child: ButtonWidget(
+                    onPressed: () {
+                      Navigator.pushNamed(context, PaymentScreen.id);
+                    },
+                    height: 100,
                     width: 100,
                     text: 'proceeds to checkout',
                     backgroundColor: kMainColor,
-                    
-                                  ),
                   ),
+                ),
               ],
             ),
-            
           ),
-          
-          
         ],
-        
       ),
-         
-           
-           
-          
-        );
-
-      
-    
+    );
   }
 }

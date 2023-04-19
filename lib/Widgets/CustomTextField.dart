@@ -11,9 +11,15 @@ class CustomTextField extends StatelessWidget {
       required this.width,
       required this.borderRadius,
       required this.hintSize,
+      this.validator,
+      this.controller,
       this.onChanged,
       this.suffixIcon});
-      Function(String)? onChanged;
+
+  Function(String)? onChanged;
+  String? Function(String?)? validator;
+
+  TextEditingController? controller;
   double? height, width;
   String? hintText;
   bool? enabled;
@@ -22,7 +28,6 @@ class CustomTextField extends StatelessWidget {
   double? borderRadius;
   double? hintSize;
   Color? hintColor;
-  
 
   @override
   Widget build(BuildContext context) {
@@ -33,13 +38,8 @@ class CustomTextField extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(borderRadius!)),
           color: Colors.white),
       child: TextFormField(
-        validator: (data){
-         if (data!.isEmpty) {
-          return 'field is required';
-         } 
-        },
+        validator: validator,
         onChanged: onChanged,
-       
         enabled: enabled,
         decoration: InputDecoration(
             fillColor: Colors.white,

@@ -5,7 +5,7 @@ import 'package:project/constants/keys.dart';
 
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({Key? key}) : super(key: key);
-static String id='PaymentScreen';
+  static String id = 'PaymentScreen';
   @override
   _PaymentScreenState createState() => _PaymentScreenState();
 }
@@ -17,8 +17,6 @@ class _PaymentScreenState extends State<PaymentScreen> {
   final _expiryYearController = TextEditingController();
   final _cvvController = TextEditingController();
   final _cardHolderNameController = TextEditingController();
-                    
-
 
   @override
   void dispose() {
@@ -56,9 +54,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   suffixIcon: Icon(Icons.credit_card),
                   labelText: 'Card Number',
                   hintText: 'Enter your card number',
-                  border: OutlineInputBorder(
-                    
-                  ),
+                  border: OutlineInputBorder(),
                 ),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -138,14 +134,19 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 },
               ),
               const SizedBox(height: 16.0),
-          ButtonWidget(
-            onPressed: () {
-              Navigator.pushNamed(context, SucssesfulScreen.id);
-            },
-          text: 'dd',
-          backgroundColor: kMainColor,
-          height: 50,
-          width: 345,
+              ButtonWidget(
+                onPressed: () {
+                  Navigator.pushNamed(context, SucssesfulScreen.id);
+                },
+                text: 'dd',
+                backgroundColor: kMainColor,
+                height: 50,
+                width: 345,
+              ),
+            ],
           ),
-          ]))));}}                
-                 
+        ),
+      ),
+    );
+  }
+}
