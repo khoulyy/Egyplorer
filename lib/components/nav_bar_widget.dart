@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:project/Screens/CartScreen.dart';
+
+import '../screens/cart_screen.dart';
 
 class NavBarWidget extends StatelessWidget {
   const NavBarWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return  Container(
-      margin: const EdgeInsets.only(left: 5, right: 5, bottom: 10,),
+    return Container(
+      margin: const EdgeInsets.only(
+        left: 5,
+        right: 5,
+        bottom: 10,
+      ),
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(

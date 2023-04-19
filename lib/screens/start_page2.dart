@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:project/Screens/StartPG3Screen.dart';
 import 'package:project/constants/keys.dart';
+import 'package:project/screens/start_page3.dart';
+
 class StartPage2Screen extends StatelessWidget {
   const StartPage2Screen({super.key});
-static String id = 'StartPage2Screen';
+  static String id = 'StartPage2Screen';
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: Center(
         child: Column(
-          
           children: [
             const Spacer(
               flex: 1,
@@ -47,7 +47,8 @@ static String id = 'StartPage2Screen';
                 ),
                 child: IconButton(
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
                         return const StartPage3Screen();
                       }));
                     },

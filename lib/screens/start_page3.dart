@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:project/Screens/SignUpLogInScreen.dart';
 import 'package:project/constants/keys.dart';
+import 'package:project/screens/signup_login_screen.dart';
+
 class StartPage3Screen extends StatelessWidget {
   const StartPage3Screen({super.key});
-static String id = 'StartPage3Screen';
+  static String id = 'StartPage3Screen';
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: Center(
         child: Column(
-          
           children: [
             const Spacer(
               flex: 1,
@@ -30,7 +30,7 @@ static String id = 'StartPage3Screen';
             const SizedBox(
               height: 25,
             ),
-            const Text( "The world's first-class modern leisure " ),
+            const Text("The world's first-class modern leisure "),
             const SizedBox(
               height: 3,
             ),
@@ -47,9 +47,10 @@ static String id = 'StartPage3Screen';
                 ),
                 child: IconButton(
                     onPressed: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return const SignUpLogInScreen();
-                    }));
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return const SignUpLogInScreen();
+                      }));
                     },
                     icon: const Icon(
                       Icons.navigate_next_rounded,

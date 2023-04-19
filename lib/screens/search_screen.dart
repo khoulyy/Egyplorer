@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:project/Widgets/AppBarWidget.dart';
-import 'package:project/Widgets/CustomTextField.dart';
-import 'package:project/Widgets/SearchActivitiesWidget.dart';
 import 'package:project/constants/keys.dart';
+
+import '../components/app_bar_widget.dart';
+import '../components/custom_text_field2.dart';
+import '../components/search_activites_widget.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});

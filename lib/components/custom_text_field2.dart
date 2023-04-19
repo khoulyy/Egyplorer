@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class CustomTextField extends StatelessWidget {
   CustomTextField(
       {super.key,
@@ -42,18 +43,20 @@ class CustomTextField extends StatelessWidget {
         onChanged: onChanged,
         enabled: enabled,
         decoration: InputDecoration(
-            fillColor: Colors.white,
-            prefixIcon: prefixIcon,
-            suffixIcon: suffixIcon,
-            hintText: hintText,
-            hintStyle: TextStyle(color: hintColor, fontSize: hintSize),
-            disabledBorder: const OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.white)),
-            focusedBorder: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.white),
-            ),
-            enabledBorder: const OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.white))),
+          fillColor: Colors.white,
+          prefixIcon: prefixIcon,
+          suffixIcon: suffixIcon,
+          hintText: hintText,
+          hintStyle: TextStyle(color: hintColor, fontSize: hintSize),
+          disabledBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.white)),
+          focusedBorder: const OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.white),
+          ),
+          enabledBorder: const OutlineInputBorder(
+            borderSide: BorderSide(color: Colors.white),
+          ),
+        ),
       ),
     );
   }

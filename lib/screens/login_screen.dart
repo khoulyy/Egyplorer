@@ -1,11 +1,11 @@
 // ignore: file_names
 import 'package:flutter/material.dart';
-import 'package:project/Screens/HomeScreen.dart';
-import 'package:project/Screens/SignUpScreen.dart';
-import 'package:project/constants/keys.dart';
+import 'package:project/screens/home_screen.dart';
+import 'package:project/screens/signup_screen.dart';
 
-import '../Widgets/ButtonWidget.dart';
-import '../Widgets/CustomTextField.dart';
+import '../components/button_widget.dart';
+import '../components/custom_text_field2.dart';
+import '../constants/keys.dart';
 
 class LogInScreen extends StatelessWidget {
   const LogInScreen({super.key});

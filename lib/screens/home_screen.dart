@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:project/Screens/CartScreen.dart';
-import 'package:project/Screens/SearchScreen.dart';
-import 'package:project/Widgets/CustomTextField.dart';
-import 'package:project/Widgets/NavBarWidget.dart';
-import 'package:project/Widgets/containerSignInAndLogIn.dart';
+
+import '../components/custom_text_field2.dart';
+import '../components/nav_bar_widget.dart';
+import '../components/container_signin_login.dart';
+import 'cart_screen.dart';
+import 'search_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:project/Screens/PaymentScreen.dart';
-import 'package:project/Widgets/AppBarWidget.dart';
-import 'package:project/Widgets/NavBarWidget.dart';
-import 'package:project/Widgets/SearchActivitiesWidget.dart';
 import 'package:project/constants/keys.dart';
 
-import '../Widgets/ButtonWidget.dart';
+import '../components/app_bar_widget.dart';
+import '../components/button_widget.dart';
+import '../components/nav_bar_widget.dart';
+import '../components/search_activites_widget.dart';
+import 'payment_screen.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});

@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:project/Screens/SuccsefulScreen.dart';
-import 'package:project/Widgets/ButtonWidget.dart';
 import 'package:project/constants/keys.dart';
+
+import '../components/button_widget.dart';
+import 'successful_screen.dart';
 
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({Key? key}) : super(key: key);
   static String id = 'PaymentScreen';
   @override
+  // ignore: library_private_types_in_public_api
   _PaymentScreenState createState() => _PaymentScreenState();
 }
 
