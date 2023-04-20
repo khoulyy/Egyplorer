@@ -41,7 +41,7 @@ class ExucrsionApp extends StatelessWidget {
         StartPage2Screen.id: (context) => const StartPage2Screen(),
         StartPage3Screen.id: (context) => const StartPage3Screen(),
         SignUpLogInScreen.id: (context) => const SignUpLogInScreen(),
-        SignUpScreen.id: (context) => SignUpScreen(),
+        SignUpScreen.id: (context) => const SignUpScreen(),
         SignUpStep3Screen.id: (context) => const SignUpStep3Screen(),
         LogInScreen.id: (context) => const LogInScreen(),
         HomeScreen.id: (context) => const HomeScreen(),
