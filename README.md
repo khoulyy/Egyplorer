@@ -16,3 +16,4 @@ An Egyptian Excursion App for UK Citizens.
 - Firebase Core: https://pub.dev/packages/firebase_core
 - Firebase Authentication: https://pub.dev/packages/firebase_auth
 - Google Navigation Bar: https://pub.dev/packages/google_nav_bar
+- Modal Progress Hud: https://pub.dev/packages/modal_progress_hud_nsn
