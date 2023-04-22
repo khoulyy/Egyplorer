@@ -21,11 +21,11 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  runApp(const ExucrsionApp());
+  runApp(const ExcursionApp());
 }
 
-class ExucrsionApp extends StatelessWidget {
-  const ExucrsionApp({super.key});
+class ExcursionApp extends StatelessWidget {
+  const ExcursionApp({super.key});
 
   @override
   Widget build(BuildContext context) {
