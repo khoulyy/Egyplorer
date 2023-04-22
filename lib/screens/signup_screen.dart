@@ -62,8 +62,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     const SizedBox(
                       height: 5,
                     ),
-                    const Row(
-                      children: [
+                    Row(
+                      children: const [
                         Text(
                           '           Email',
                           style: TextStyle(
@@ -97,8 +97,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     const SizedBox(
                       height: 10,
                     ),
-                    const Row(
-                      children: [
+                    Row(
+                      children: const [
                         Text(
                           '           password',
                           style: TextStyle(
@@ -133,8 +133,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                     const SizedBox(
                       height: 10,
                     ),
-                    const Row(
-                      children: [
+                    Row(
+                      children: const [
                         Text(
                           '           confirm password',
                           style: TextStyle(

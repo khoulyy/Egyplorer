@@ -38,8 +38,8 @@ class ActivityWidget extends StatelessWidget {
                 const SizedBox(
                   height: 5,
                 ),
-                const Row(
-                  children: [
+                Row(
+                  children: const [
                     Text(
                       'Location:Giza',
                       style:
@@ -79,8 +79,8 @@ class ActivityWidget extends StatelessWidget {
                       ),
                       ElevatedButton(
                         onPressed: () {},
-                        child: const Row(
-                          children: [
+                        child: Row(
+                          children: const [
                             Text('Add to cart'),
                             Icon(
                               FontAwesomeIcons.cartShopping,

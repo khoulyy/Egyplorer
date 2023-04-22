@@ -34,8 +34,8 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 25,
               ),
-              const Row(
-                children: [
+              Row(
+                children: const [
                   Text(
                     '    find your next trip',
                     style: TextStyle(
@@ -49,8 +49,8 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              const Row(
-                children: [
+              Row(
+                children: const [
                   Text(
                     '   Diving and Hiking',
                     style: TextStyle(
