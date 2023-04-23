@@ -50,8 +50,8 @@ class InfoPage extends StatelessWidget {
               color: kSecoundaryColor,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Center(
-              child: const Text(
+            child: const Center(
+              child: Text(
                 "Select your Gender",
                 style: TextStyle(
                   fontSize: 18,
@@ -67,8 +67,8 @@ class InfoPage extends StatelessWidget {
               color: kSecoundaryColor,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Center(
-              child: const Text(
+            child: const Center(
+              child: Text(
                 "Additional Information",
                 style: TextStyle(
                   fontSize: 18,
