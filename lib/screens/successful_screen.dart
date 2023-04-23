@@ -8,8 +8,8 @@ class SucssesfulScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: kMainColor,
-      body: const Center(
-        child: Column(
+      body: Center(
+        child: const Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [Text('congrats ')],
         ),
