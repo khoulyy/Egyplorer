@@ -19,24 +19,24 @@ class CustomCard extends StatelessWidget {
               )
             ],
           ),
-          child: Card(
+          child: const Card(
             elevation: 10,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+              padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     'Snorkling',
                     style: TextStyle(fontSize: 16, color: Colors.grey),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 8,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const [
+                    children: [
                       Text(
                         'from £220',
                         style: TextStyle(fontSize: 16, color: Colors.black),

@@ -6,12 +6,12 @@ class SucssesfulScreen extends StatelessWidget {
   static String id = 'SucssesfulScreen';
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       backgroundColor: kMainColor,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
-          children: const [Text('congrats ')],
+          children: [Text('congrats ')],
         ),
       ),
     );

@@ -14,9 +14,9 @@ class SignUpStep3Screen extends StatelessWidget {
           const SizedBox(
             height: 50,
           ),
-          Row(
+          const Row(
             mainAxisAlignment: MainAxisAlignment.start,
-            children: const [
+            children: [
               Text(
                 '   Your response',
                 style: TextStyle(color: Colors.black, fontSize: 24),
