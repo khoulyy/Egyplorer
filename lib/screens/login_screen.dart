@@ -70,8 +70,8 @@ class _LogInScreenState extends State<LogInScreen> {
                         const SizedBox(
                           height: 10,
                         ),
-                        const Row(
-                          children: [
+                        Row(
+                          children: const [
                             Text(
                               '           Email*',
                               style: TextStyle(
@@ -106,8 +106,8 @@ class _LogInScreenState extends State<LogInScreen> {
                         const SizedBox(
                           height: 25,
                         ),
-                        const Row(
-                          children: [
+                        Row(
+                          children: const [
                             Text(
                               '           password*',
                               style: TextStyle(

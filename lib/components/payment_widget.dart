@@ -20,16 +20,16 @@ class ActivityWidget extends StatelessWidget {
               width: 200,
             ),
           ),
-          const Column(
+          Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 'Historical Tour',
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   Text(
                     'Location: Giza',
                     style: TextStyle(
@@ -46,11 +46,11 @@ class ActivityWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              Text(
+              const Text(
                 'Duration: 6 Hours',
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
-              Text(
+              const Text(
                 'Description:',
                 style: TextStyle(fontWeight: FontWeight.bold),
               ),
