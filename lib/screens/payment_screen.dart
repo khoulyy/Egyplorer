@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:project/constants/keys.dart';
+import 'package:project/screens/payment_page.dart';
 
 import '../components/button_widget.dart';
-import 'successful_screen.dart';
 
 class PaymentScreen extends StatefulWidget {
   const PaymentScreen({Key? key}) : super(key: key);
@@ -138,7 +138,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
               const SizedBox(height: 16.0),
               ButtonWidget(
                 onPressed: () {
-                  Navigator.pushNamed(context, SucssesfulScreen.id);
+                  Navigator.pushNamed(context, PaymentPage.id);
                 },
                 text: 'dd',
                 backgroundColor: kMainColor,

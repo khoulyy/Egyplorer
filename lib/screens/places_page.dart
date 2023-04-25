@@ -6,7 +6,7 @@ import '../components/custom_button.dart';
 
 class PlacesPage extends StatefulWidget {
   const PlacesPage({super.key});
-  final String id = "PlacesPage";
+  static String id = "PlacesPage";
 
   @override
   State<PlacesPage> createState() => _PlacesPageState();

@@ -2,8 +2,8 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:project/constants/keys.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
+import 'package:project/screens/interest_page.dart';
 import 'package:project/screens/login_screen.dart';
-import 'package:project/screens/signup_step3_screen.dart';
 
 import '../components/button_widget.dart';
 import '../components/custom_text_field2.dart';
@@ -182,7 +182,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             await registerUser();
 
                             // ignore: use_build_context_synchronously
-                            Navigator.pushNamed(context, SignUpStep3Screen.id);
+                            Navigator.pushNamed(context, InterestPage.id);
                           } on FirebaseAuthException catch (ex) {
                             if (ex.code == 'weak-password') {
                               ScaffoldMessenger.of(context).showSnackBar(

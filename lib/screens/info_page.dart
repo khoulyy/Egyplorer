@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:project/screens/places_page.dart';
+import 'package:project/screens/signup_step3_screen.dart';
 
 import '../components/custom_button.dart';
 import '../components/custom_radio_button.dart';
@@ -8,7 +8,7 @@ import '../constants/keys.dart';
 
 class InfoPage extends StatelessWidget {
   const InfoPage({super.key});
-  final String id = 'InfoPage';
+  static String id = 'InfoPage';
 
   @override
   Widget build(BuildContext context) {
@@ -93,7 +93,7 @@ class InfoPage extends StatelessWidget {
             child: CustomButton(
               onClicked: () {
                 Navigator.push(context, MaterialPageRoute(builder: (context) {
-                  return const PlacesPage();
+                  return const SignUpStep3Screen();
                 }));
               },
             ),

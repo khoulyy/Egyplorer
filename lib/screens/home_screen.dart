@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:project/screens/places_page.dart';
 
 import '../components/custom_text_field2.dart';
 import '../components/nav_bar_widget.dart';
@@ -161,6 +162,9 @@ class HomeScreen extends StatelessWidget {
                     width: 190,
                   ),
                   GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, PlacesPage.id);
+                    },
                     child: const Text(
                       'see all',
                       style: TextStyle(color: Colors.blueAccent),

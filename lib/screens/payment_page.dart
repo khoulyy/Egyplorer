@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:project/screens/successful_screen.dart';
 
 import '../components/search_activites_widget.dart';
 
 class PaymentPage extends StatelessWidget {
   const PaymentPage({super.key});
-  final String id = 'PaymentPage';
+  static String id = 'PaymentPage';
 
   @override
   Widget build(BuildContext context) {
@@ -157,12 +158,14 @@ class PaymentPage extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(
+            SizedBox(
               width: 300,
               height: 50,
               child: ElevatedButton(
-                onPressed: null,
-                child: Text(
+                onPressed: () {
+                  Navigator.pushNamed(context, SucssesfulScreen.id);
+                },
+                child: const Text(
                   "Confirm Payment",
                   style: TextStyle(fontSize: 20),
                 ),

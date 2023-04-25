@@ -6,7 +6,7 @@ import 'info_page.dart';
 
 class InterestPage extends StatelessWidget {
   const InterestPage({super.key});
-  final String id = 'InterestPage';
+  static String id = 'InterestPage';
 
   @override
   Widget build(BuildContext context) {

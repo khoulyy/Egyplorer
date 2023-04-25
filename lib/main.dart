@@ -4,8 +4,12 @@ import 'package:project/firebase_options.dart';
 import 'package:project/screens/cart_screen.dart';
 import 'package:project/screens/get_started_screen.dart';
 import 'package:project/screens/home_screen.dart';
+import 'package:project/screens/info_page.dart';
+import 'package:project/screens/interest_page.dart';
 import 'package:project/screens/login_screen.dart';
+import 'package:project/screens/payment_page.dart';
 import 'package:project/screens/payment_screen.dart';
+import 'package:project/screens/places_page.dart';
 import 'package:project/screens/search_screen.dart';
 import 'package:project/screens/signup_login_screen.dart';
 import 'package:project/screens/signup_screen.dart';
@@ -42,12 +46,16 @@ class ExcursionApp extends StatelessWidget {
         StartPage3Screen.id: (context) => const StartPage3Screen(),
         SignUpLogInScreen.id: (context) => const SignUpLogInScreen(),
         SignUpScreen.id: (context) => const SignUpScreen(),
+        InterestPage.id: (context) => const InterestPage(),
+        InfoPage.id: (context) => const InfoPage(),
         SignUpStep3Screen.id: (context) => const SignUpStep3Screen(),
         LogInScreen.id: (context) => const LogInScreen(),
         HomeScreen.id: (context) => const HomeScreen(),
         SearchScreen.id: (context) => const SearchScreen(),
         CartPage.id: (context) => const CartPage(),
+        PlacesPage.id: (context) => const PlacesPage(),
         PaymentScreen.id: (context) => const PaymentScreen(),
+        PaymentPage.id: (context) => const PaymentPage(),
         SucssesfulScreen.id: (context) => const SucssesfulScreen(),
       },
     );
