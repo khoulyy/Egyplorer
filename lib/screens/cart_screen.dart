@@ -5,7 +5,7 @@ import '../components/app_bar_widget.dart';
 import '../components/button_widget.dart';
 import '../components/nav_bar_widget.dart';
 import '../components/search_activites_widget.dart';
-import 'payment_screen.dart';
+import 'credit_card_input_screen.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({super.key});
