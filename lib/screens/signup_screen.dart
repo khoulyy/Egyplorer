@@ -236,7 +236,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               const Text(
-                                'or you can log in using',
+                                'or you can SignUp in using',
                                 style: TextStyle(
                                     color: Colors.white,
                                     fontSize: 20,
