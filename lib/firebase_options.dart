@@ -49,6 +49,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '942913166251',
     projectId: 'egyptian-excursion-uk',
     authDomain: 'egyptian-excursion-uk.firebaseapp.com',
+    databaseURL: 'https://egyptian-excursion-uk-default-rtdb.firebaseio.com',
     storageBucket: 'egyptian-excursion-uk.appspot.com',
     measurementId: 'G-NGLWT4T607',
   );
@@ -58,6 +59,7 @@ class DefaultFirebaseOptions {
     appId: '1:942913166251:android:fe77ad1eebf4156841d0ee',
     messagingSenderId: '942913166251',
     projectId: 'egyptian-excursion-uk',
+    databaseURL: 'https://egyptian-excursion-uk-default-rtdb.firebaseio.com',
     storageBucket: 'egyptian-excursion-uk.appspot.com',
   );
 
@@ -66,7 +68,9 @@ class DefaultFirebaseOptions {
     appId: '1:942913166251:ios:4da4d65b70022e2d41d0ee',
     messagingSenderId: '942913166251',
     projectId: 'egyptian-excursion-uk',
+    databaseURL: 'https://egyptian-excursion-uk-default-rtdb.firebaseio.com',
     storageBucket: 'egyptian-excursion-uk.appspot.com',
+    androidClientId: '942913166251-o62lrqiucrpitir04muioqn84l2abqma.apps.googleusercontent.com',
     iosClientId: '942913166251-35frtnqkcbv58acvpsqsnbogijoi0lkq.apps.googleusercontent.com',
     iosBundleId: 'com.example.project',
   );
@@ -76,7 +80,9 @@ class DefaultFirebaseOptions {
     appId: '1:942913166251:ios:4da4d65b70022e2d41d0ee',
     messagingSenderId: '942913166251',
     projectId: 'egyptian-excursion-uk',
+    databaseURL: 'https://egyptian-excursion-uk-default-rtdb.firebaseio.com',
     storageBucket: 'egyptian-excursion-uk.appspot.com',
+    androidClientId: '942913166251-o62lrqiucrpitir04muioqn84l2abqma.apps.googleusercontent.com',
     iosClientId: '942913166251-35frtnqkcbv58acvpsqsnbogijoi0lkq.apps.googleusercontent.com',
     iosBundleId: 'com.example.project',
   );

@@ -1,20 +1,21 @@
 {
   "project_info": {
     "project_number": "942913166251",
+    "firebase_url": "https://egyptian-excursion-uk-default-rtdb.firebaseio.com",
     "project_id": "egyptian-excursion-uk",
     "storage_bucket": "egyptian-excursion-uk.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:942913166251:android:fe77ad1eebf4156841d0ee",
+        "mobilesdk_app_id": "1:942913166251:android:19cdace5f1e8cf3941d0ee",
         "android_client_info": {
-          "package_name": "com.example.project"
+          "package_name": "com.example.firebase_tutorial"
         }
       },
       "oauth_client": [
         {
-          "client_id": "942913166251-ram9mr36rtp8goaqku5b8f49nd55kqdu.apps.googleusercontent.com",
+          "client_id": "942913166251-m3u3bbg962plvsuk3rsflpta6chnpq61.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
@@ -27,8 +28,59 @@
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "942913166251-ram9mr36rtp8goaqku5b8f49nd55kqdu.apps.googleusercontent.com",
+              "client_id": "942913166251-m3u3bbg962plvsuk3rsflpta6chnpq61.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "942913166251-35frtnqkcbv58acvpsqsnbogijoi0lkq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.project"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:942913166251:android:fe77ad1eebf4156841d0ee",
+        "android_client_info": {
+          "package_name": "com.example.project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "942913166251-o62lrqiucrpitir04muioqn84l2abqma.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.project",
+            "certificate_hash": "c97c6d58032549bd14265ee617f75a4dabd9f8c5"
+          }
+        },
+        {
+          "client_id": "942913166251-m3u3bbg962plvsuk3rsflpta6chnpq61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoJpcAIDfmJN0ka73m4vlkVR-wYEkSX0E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "942913166251-m3u3bbg962plvsuk3rsflpta6chnpq61.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "942913166251-35frtnqkcbv58acvpsqsnbogijoi0lkq.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.project"
+              }
             }
           ]
         }
