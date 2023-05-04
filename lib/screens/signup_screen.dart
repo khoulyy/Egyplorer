@@ -132,6 +132,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         height: 10,
                       ),
                       CustomTextField(
+                        obscure: true,
                         controller: passwordController,
                         onChanged: (data) {
                           password = data;
@@ -168,6 +169,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         height: 10,
                       ),
                       CustomTextField(
+                        obscure: true,
                         controller: confirmPasswordController,
                         onChanged: (data) {
                           confirmPassword = data;
