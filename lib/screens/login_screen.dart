@@ -142,6 +142,7 @@ class _LogInScreenState extends State<LogInScreen> {
                             height: 10,
                           ),
                           CustomTextField(
+                            obscure: true,
                             onChanged: (data) {
                               password = data;
                             },

@@ -2,20 +2,22 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class CustomTextField extends StatelessWidget {
-  CustomTextField(
-      {super.key,
-      required this.hintColor,
-      required this.hintText,
-      this.enabled,
-      this.prefixIcon,
-      required this.height,
-      required this.width,
-      required this.borderRadius,
-      required this.hintSize,
-      this.validator,
-      this.controller,
-      this.onChanged,
-      this.suffixIcon});
+  CustomTextField({
+    super.key,
+    required this.hintColor,
+    required this.hintText,
+    this.enabled,
+    this.prefixIcon,
+    required this.height,
+    required this.width,
+    required this.borderRadius,
+    required this.hintSize,
+    this.validator,
+    this.controller,
+    this.onChanged,
+    this.suffixIcon,
+    this.obscure = false,
+  });
 
   Function(String)? onChanged;
   String? Function(String?)? validator;
@@ -29,7 +31,7 @@ class CustomTextField extends StatelessWidget {
   double? borderRadius;
   double? hintSize;
   Color? hintColor;
-
+  bool obscure;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -39,6 +41,7 @@ class CustomTextField extends StatelessWidget {
           borderRadius: BorderRadius.all(Radius.circular(borderRadius!)),
           color: Colors.white),
       child: TextFormField(
+        obscureText: obscure,
         validator: validator,
         onChanged: onChanged,
         enabled: enabled,
