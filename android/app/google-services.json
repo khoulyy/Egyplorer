@@ -8,42 +8,6 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:942913166251:android:19cdace5f1e8cf3941d0ee",
-        "android_client_info": {
-          "package_name": "com.example.firebase_tutorial"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "942913166251-m3u3bbg962plvsuk3rsflpta6chnpq61.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAoJpcAIDfmJN0ka73m4vlkVR-wYEkSX0E"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "942913166251-m3u3bbg962plvsuk3rsflpta6chnpq61.apps.googleusercontent.com",
-              "client_type": 3
-            },
-            {
-              "client_id": "942913166251-35frtnqkcbv58acvpsqsnbogijoi0lkq.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.example.project"
-              }
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
         "mobilesdk_app_id": "1:942913166251:android:fe77ad1eebf4156841d0ee",
         "android_client_info": {
           "package_name": "com.example.project"
