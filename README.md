@@ -1,4 +1,4 @@
-# Sphinx-Tours
+# Egyplorer
 An Egyptian Excursion App for UK Citizens.
 
 ## Technologies
@@ -15,5 +15,7 @@ An Egyptian Excursion App for UK Citizens.
 - Like Button: https://pub.dev/packages/like_button
 - Firebase Core: https://pub.dev/packages/firebase_core
 - Firebase Auth: https://pub.dev/packages/firebase_auth 
+- Cloud Firestore: https://pub.dev/packages/cloud_firestore
 - Google Navigation Bar: https://pub.dev/packages/google_nav_bar
 - Modal Progress Hud: https://pub.dev/packages/modal_progress_hud_nsn
+- Google Sign In: https://pub.dev/packages/google_sign_in
