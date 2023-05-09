@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:project/screens/places_page.dart';
@@ -8,9 +9,19 @@ import '../components/container_signin_login.dart';
 import 'cart_screen.dart';
 import 'search_screen.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
   static String id = 'HomeScreen';
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  CollectionReference activityRef =
+      FirebaseFirestore.instance.collection('Activities');
+  CollectionReference locationsRef =
+      FirebaseFirestore.instance.collection('Locations');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,47 +114,30 @@ class HomeScreen extends StatelessWidget {
                 height: 10,
               ),
               SizedBox(
-                height: 170,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    Row(
-                      children: [
-                        CustomContainer(
-                          height: 138,
-                          width: 230,
-                          firstText: 'Snorkling',
-                          secoundText: 'from 100',
-                          url:
-                              'https://images.unsplash.com/photo-1484507175567-a114f764f78b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
-                        ),
-                        CustomContainer(
-                          height: 138,
-                          width: 230,
-                          firstText: 'Snorkling',
-                          secoundText: 'from 100',
-                          url:
-                              'https://images.unsplash.com/photo-1484507175567-a114f764f78b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
-                        ),
-                        CustomContainer(
-                          height: 138,
-                          width: 230,
-                          firstText: 'Snorkling',
-                          secoundText: 'from 100',
-                          url:
-                              'https://images.unsplash.com/photo-1484507175567-a114f764f78b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
-                        ),
-                        CustomContainer(
-                          height: 138,
-                          width: 230,
-                          firstText: 'Snorkling',
-                          secoundText: 'from 100',
-                          url:
-                              'https://images.unsplash.com/photo-1484507175567-a114f764f78b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
-                        ),
-                      ],
-                    ),
-                  ],
+                height: 200,
+                child: StreamBuilder(
+                  stream: activityRef.snapshots(),
+                  builder: (context, snapshot) {
+                    if (snapshot.hasError) {
+                      return const Text('Error');
+                    }
+                    if (snapshot.hasData) {
+                      return ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: snapshot.data!.docs.length,
+                          itemBuilder: (context, index) {
+                            return CustomContainer(
+                                height: 130,
+                                width: 250,
+                                firstText:
+                                    '${snapshot.data!.docs[index]['Location']}',
+                                secoundText:
+                                    'Duration ${snapshot.data!.docs[index]['Duration']}',
+                                url: '${snapshot.data!.docs[index]['image']}');
+                          });
+                    }
+                    return const Text("Loading");
+                  },
                 ),
               ),
               const SizedBox(
@@ -177,38 +171,27 @@ class HomeScreen extends StatelessWidget {
               ),
               SizedBox(
                 height: 170,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    Row(
-                      children: [
-                        CustomContainer(
-                          height: 138,
-                          width: 230,
-                          firstText: 'Upper Egypt',
-                          secoundText: ' 4 activities',
-                          url:
-                              'https://images.unsplash.com/photo-1557640047-75c97a5f1ea4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1795&q=80',
-                        ),
-                        CustomContainer(
-                          height: 138,
-                          width: 230,
-                          firstText: 'Upper Egypt',
-                          secoundText: ' 4 activities',
-                          url:
-                              'https://images.unsplash.com/photo-1557640047-75c97a5f1ea4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1795&q=80',
-                        ),
-                        CustomContainer(
-                          height: 138,
-                          width: 230,
-                          firstText: 'Upper Egypt',
-                          secoundText: ' 4 activities',
-                          url:
-                              'https://images.unsplash.com/photo-1557640047-75c97a5f1ea4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1795&q=80',
-                        ),
-                      ],
-                    ),
-                  ],
+                child: StreamBuilder(
+                  stream: locationsRef.snapshots(),
+                  builder: (context, snapshot) {
+                    if (snapshot.hasError) {
+                      return const Text('Error');
+                    }
+                    if (snapshot.hasData) {
+                      return ListView.builder(
+                          scrollDirection: Axis.horizontal,
+                          itemCount: snapshot.data!.docs.length,
+                          itemBuilder: (context, index) {
+                            return CustomContainer(
+                                height: 130,
+                                width: 250,
+                                firstText:
+                                    '${snapshot.data!.docs[index]['LocationName']}',
+                                url: '${snapshot.data!.docs[index]['image']}');
+                          });
+                    }
+                    return const Text("Loading");
+                  },
                 ),
               ),
             ],

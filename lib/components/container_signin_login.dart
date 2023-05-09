@@ -27,7 +27,7 @@ class CustomContainer extends StatelessWidget {
     required this.height,
     required this.width,
     required this.firstText,
-    required this.secoundText,
+    this.secoundText = "",
     required this.url,
   });
   double? height, width;
