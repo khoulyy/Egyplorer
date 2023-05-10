@@ -3,7 +3,16 @@ import 'package:flutter/material.dart';
 class ActivityWidget extends StatelessWidget {
   const ActivityWidget({
     super.key,
+    this.url,
+    this.activityName,
+    this.activityLocation,
+    this.duration,
   });
+
+  final String? url;
+  final String? activityName;
+  final String? activityLocation;
+  final String? duration;
 
   @override
   Widget build(BuildContext context) {
@@ -16,28 +25,29 @@ class ActivityWidget extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(15),
             child: Image.network(
-              'https://images.unsplash.com/photo-1541769740-098e80269166?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
+              url!,
               width: 200,
             ),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Text(
-                'Historical Tour',
-                style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+              Text(
+                activityName!,
+                style:
+                    const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text(
-                    'Location: Giza',
-                    style: TextStyle(
+                    'Location: $activityLocation',
+                    style: const TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 15,
                     ),
                   ),
-                  Text(
+                  const Text(
                     '250 EGP',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -46,9 +56,9 @@ class ActivityWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              const Text(
-                'Duration: 6 Hours',
-                style: TextStyle(fontWeight: FontWeight.bold),
+              Text(
+                'Duration: $duration',
+                style: const TextStyle(fontWeight: FontWeight.bold),
               ),
               const Text(
                 'Description:',

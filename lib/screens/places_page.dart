@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:project/components/place_widget.dart';
 import 'package:project/screens/payment_page.dart';
 
 import '../components/custom_button.dart';
@@ -33,9 +32,6 @@ class _PlacesPageState extends State<PlacesPage> {
               ),
             ),
           ),
-          const PlaceWidget(),
-          const PlaceWidget(),
-          const PlaceWidget(),
           CustomButton(
             onClicked: () {
               Navigator.push(context, MaterialPageRoute(builder: (context) {

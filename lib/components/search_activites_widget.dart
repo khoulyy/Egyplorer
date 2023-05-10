@@ -3,101 +3,94 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ActivityWidget extends StatelessWidget {
   const ActivityWidget({
+    this.activityName,
+    this.duration,
     super.key,
+    this.url,
+    this.activityLocation,
   });
 
+  final String? url;
+  final String? activityName;
+  final String? duration;
+  final String? activityLocation;
   @override
   Widget build(BuildContext context) {
     return Card(
       elevation: 2,
       margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       color: Colors.lightBlue[50],
-      child: Row(
-        children: [
-          const SizedBox(
-            width: 10,
-          ),
-          ClipRRect(
-            borderRadius: BorderRadius.circular(15),
-            child: Image.network(
-              'https://images.unsplash.com/photo-1541769740-098e80269166?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80',
-              width: 150,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            Text(
+              activityName!,
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.only(
-              left: 10,
-              top: 15,
-            ),
-            child: Column(
+            Row(
               children: [
-                const Text(
-                  'Historical Tour',
-                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(15),
+                  child: Image.network(
+                    url!,
+                    width: 130,
+                  ),
                 ),
-                const SizedBox(
-                  height: 5,
-                ),
-                Row(
-                  children: const [
-                    Text(
-                      'Location:Giza',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
-                    ),
-                    SizedBox(
-                      width: 45,
-                    ),
-                    Text(
-                      'Â£250',
-                      style: TextStyle(fontWeight: FontWeight.bold),
-                    ),
-                  ],
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                const Text(
-                  'Duration:6hours                   ',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(
-                  height: 5,
-                ),
-                const Text(
-                  'Description:                            ',
-                  style: TextStyle(fontWeight: FontWeight.bold),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                Align(
-                  child: Row(
-                    children: [
-                      const SizedBox(
-                        width: 50,
-                      ),
-                      ElevatedButton(
-                        onPressed: () {},
-                        child: Row(
-                          children: const [
-                            Text('Add to cart'),
-                            Icon(
-                              FontAwesomeIcons.cartShopping,
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 10,
+                    top: 15,
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.only(left: 40.0),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            Text(
+                              'Location: $activityLocation',
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 15),
                             ),
                           ],
                         ),
-                      ),
-                    ],
+                        Text(
+                          'Duration: $duration',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        const Text(
+                          'Price: Â£250',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                        Align(
+                          child: Row(
+                            children: [
+                              ElevatedButton(
+                                onPressed: () {},
+                                child: Row(
+                                  children: const [
+                                    Text('Add to cart'),
+                                    Icon(
+                                      FontAwesomeIcons.cartShopping,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                        const SizedBox(
+                          height: 10,
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
+                )
               ],
             ),
-          )
-        ],
+          ],
+        ),
       ),
     );
   }
