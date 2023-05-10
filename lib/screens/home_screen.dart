@@ -46,8 +46,8 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(
                 height: 25,
               ),
-              Row(
-                children: const [
+              const Row(
+                children: [
                   Text(
                     '    find your next trip',
                     style: TextStyle(
@@ -61,8 +61,8 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(
                 height: 10,
               ),
-              Row(
-                children: const [
+              const Row(
+                children: [
                   Text(
                     '   Diving and Hiking',
                     style: TextStyle(

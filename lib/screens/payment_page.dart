@@ -20,15 +20,15 @@ class PaymentPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             const ActivityWidget(),
-            Card(
+            const Card(
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 8.0, vertical: 8.0),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         Text(
                           'Check In',
                           style: TextStyle(fontSize: 22, color: Colors.grey),
@@ -41,11 +41,11 @@ class PaymentPage extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 8.0, vertical: 8.0),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         Text(
                           'Check Out',
                           style: TextStyle(fontSize: 22, color: Colors.grey),
@@ -58,10 +58,10 @@ class PaymentPage extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    padding: EdgeInsets.symmetric(horizontal: 8.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         Text(
                           'Guest',
                           style: TextStyle(fontSize: 22, color: Colors.grey),
@@ -76,15 +76,15 @@ class PaymentPage extends StatelessWidget {
                 ],
               ),
             ),
-            Card(
+            const Card(
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 8.0, vertical: 8.0),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         Text(
                           '5 Nights',
                           style: TextStyle(fontSize: 22, color: Colors.grey),
@@ -97,11 +97,11 @@ class PaymentPage extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 8.0, vertical: 8.0),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 8.0, vertical: 8.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         Text(
                           'Taxes & Fees (10%)',
                           style: TextStyle(fontSize: 22, color: Colors.grey),
@@ -113,15 +113,15 @@ class PaymentPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  const Divider(
+                  Divider(
                     indent: 50,
                     endIndent: 50,
                   ),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                    padding: EdgeInsets.symmetric(horizontal: 8.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: const [
+                      children: [
                         Text(
                           'Guest',
                           style: TextStyle(fontSize: 22, color: Colors.grey),
@@ -136,10 +136,10 @@ class PaymentPage extends StatelessWidget {
                 ],
               ),
             ),
-            Card(
+            const Card(
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: const [
+                children: [
                   Icon(
                     Icons.credit_card,
                     size: 50,

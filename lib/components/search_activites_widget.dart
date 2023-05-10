@@ -68,8 +68,8 @@ class ActivityWidget extends StatelessWidget {
                             children: [
                               ElevatedButton(
                                 onPressed: () {},
-                                child: Row(
-                                  children: const [
+                                child: const Row(
+                                  children: [
                                     Text('Add to cart'),
                                     Icon(
                                       FontAwesomeIcons.cartShopping,
