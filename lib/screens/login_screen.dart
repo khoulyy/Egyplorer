@@ -209,25 +209,26 @@ class _LogInScreenState extends State<LogInScreen> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              const Text(
-                                'or you can log in using',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              const SizedBox(
-                                width: 20,
-                              ),
                               GestureDetector(
                                 onTap: () async {
                                   await signInWithGoogle();
-                                  // ignore: use_build_context_synchronously
                                   Navigator.pushNamed(context, HomeScreen.id);
+                                  // ignore: use_build_context_synchronously
                                 },
-                                child: Image.asset(
-                                  'assets/images/Google.png',
-                                  height: 50,
+                                child: Card(
+                                  shadowColor: Colors.black,
+                                  child: Row(
+                                    children: [
+                                      Image.asset(
+                                        'assets/images/Google.png',
+                                        height: 50,
+                                      ),
+                                      const SizedBox(
+                                        width: 10,
+                                      ),
+                                      const Text('Log in using Google     '),
+                                    ],
+                                  ),
                                 ),
                               ),
                             ],
