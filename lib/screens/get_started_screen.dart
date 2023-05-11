@@ -18,9 +18,9 @@ class GetStartedScreen extends StatelessWidget {
               flex: 2,
             ),
             const Text(
-              'Welcome to Anubis',
+              'Welcome to Egyplorer',
               style: TextStyle(
-                fontSize: 20,
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
@@ -29,7 +29,7 @@ class GetStartedScreen extends StatelessWidget {
             Image.asset('assets/images/Beach_Monochromatic 1.png'),
             const Spacer(flex: 1),
             const Text(
-              'The best Excursion App for Uk CITIZENS ',
+              'The best Excursion App for UK citizens ',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -40,17 +40,17 @@ class GetStartedScreen extends StatelessWidget {
               height: 10,
             ),
             const Text(
-              'why khonsu?',
+              'Why Egyplorer?',
               style: TextStyle(
-                fontSize: 15,
+                fontSize: 20,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
             ),
             const Text(
-              'fint out here',
+              'Find out here',
               style: TextStyle(
-                fontSize: 15,
+                fontSize: 20,
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
               ),
