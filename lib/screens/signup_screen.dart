@@ -240,6 +240,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                               GestureDetector(
                                 onTap: () async {
                                   await signInWithGoogle();
+                                  // ignore: use_build_context_synchronously
                                   Navigator.pushNamed(context, InterestPage.id);
                                   // ignore: use_build_context_synchronously
                                 },

@@ -212,6 +212,7 @@ class _LogInScreenState extends State<LogInScreen> {
                               GestureDetector(
                                 onTap: () async {
                                   await signInWithGoogle();
+                                  // ignore: use_build_context_synchronously
                                   Navigator.pushNamed(context, HomeScreen.id);
                                   // ignore: use_build_context_synchronously
                                 },
