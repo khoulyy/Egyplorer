@@ -36,6 +36,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   activityName: '${snapshot.data!.docs[index]['ActivityName']}',
                   activityLocation: '${snapshot.data!.docs[index]['Location']}',
                   duration: '${snapshot.data!.docs[index]['Duration']}',
+                  price: '${snapshot.data!.docs[index]['Price']}',
                 );
               },
             );

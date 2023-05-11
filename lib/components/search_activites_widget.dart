@@ -8,12 +8,14 @@ class ActivityWidget extends StatelessWidget {
     super.key,
     this.url,
     this.activityLocation,
+    this.price,
   });
 
   final String? url;
   final String? activityName;
   final String? duration;
   final String? activityLocation;
+  final String? price;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -59,9 +61,9 @@ class ActivityWidget extends StatelessWidget {
                           'Duration: $duration',
                           style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
-                        const Text(
-                          'Price: Â£250',
-                          style: TextStyle(fontWeight: FontWeight.bold),
+                        Text(
+                          'Price: $price EGP',
+                          style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                         Align(
                           child: Row(
