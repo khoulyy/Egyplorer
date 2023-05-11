@@ -79,9 +79,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                             fontSize: 50,
                             fontWeight: FontWeight.bold),
                       ),
-                      const SizedBox(
-                        height: 5,
-                      ),
                       const Row(
                         children: [
                           Text(
@@ -92,9 +89,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 fontWeight: FontWeight.bold),
                           ),
                         ],
-                      ),
-                      const SizedBox(
-                        height: 10,
                       ),
                       CustomTextField(
                         onChanged: (data) {
@@ -127,9 +121,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 fontWeight: FontWeight.bold),
                           ),
                         ],
-                      ),
-                      const SizedBox(
-                        height: 10,
                       ),
                       CustomTextField(
                         obscure: true,
@@ -164,9 +155,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                                 fontWeight: FontWeight.bold),
                           ),
                         ],
-                      ),
-                      const SizedBox(
-                        height: 10,
                       ),
                       CustomTextField(
                         obscure: true,
@@ -230,7 +218,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         fontSize: 20,
                       ),
                       const SizedBox(
-                        height: 20,
+                        height: 10,
                       ),
                       Column(
                         children: [

@@ -116,7 +116,7 @@ class _LogInScreenState extends State<LogInScreen> {
                               return null;
                             },
                             hintColor: Colors.black,
-                            hintText: 'enter your email',
+                            hintText: 'Enter your email',
                             prefixIcon: const Icon(Icons.email),
                             height: 45,
                             width: 300,
@@ -124,7 +124,7 @@ class _LogInScreenState extends State<LogInScreen> {
                             hintSize: 15,
                           ),
                           const SizedBox(
-                            height: 25,
+                            height: 20,
                           ),
                           const Row(
                             children: [
@@ -153,7 +153,7 @@ class _LogInScreenState extends State<LogInScreen> {
                               return null;
                             },
                             hintColor: Colors.black,
-                            hintText: 'enter your password',
+                            hintText: 'Enter your password',
                             prefixIcon: const Icon(
                               Icons.password,
                             ),
@@ -161,9 +161,6 @@ class _LogInScreenState extends State<LogInScreen> {
                             width: 300,
                             borderRadius: 5,
                             hintSize: 15,
-                          ),
-                          const SizedBox(
-                            height: 10,
                           ),
                           const SizedBox(
                             height: 20,

@@ -34,30 +34,22 @@ class CustomTextField extends StatelessWidget {
   bool obscure;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: height,
+    return SizedBox(
+      height: 60,
       width: width,
-      decoration: BoxDecoration(
-          borderRadius: BorderRadius.all(Radius.circular(borderRadius!)),
-          color: Colors.white),
       child: TextFormField(
         obscureText: obscure,
         validator: validator,
         onChanged: onChanged,
         enabled: enabled,
         decoration: InputDecoration(
+            filled: true,
             fillColor: Colors.white,
             prefixIcon: prefixIcon,
             suffixIcon: suffixIcon,
             hintText: hintText,
             hintStyle: TextStyle(color: hintColor, fontSize: hintSize),
-            disabledBorder: const OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.white)),
-            focusedBorder: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.white),
-            ),
-            enabledBorder: const OutlineInputBorder(
-                borderSide: BorderSide(color: Colors.white))),
+            border: const OutlineInputBorder()),
       ),
     );
   }
