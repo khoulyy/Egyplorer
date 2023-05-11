@@ -1,7 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:project/screens/payment_page.dart';
-
-import '../components/custom_button.dart';
+import 'package:project/components/place_widget.dart';
 
 class PlacesPage extends StatefulWidget {
   const PlacesPage({super.key});
@@ -12,6 +11,8 @@ class PlacesPage extends StatefulWidget {
 }
 
 class _PlacesPageState extends State<PlacesPage> {
+  CollectionReference locationsRef =
+      FirebaseFirestore.instance.collection('Locations');
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,11 +20,10 @@ class _PlacesPageState extends State<PlacesPage> {
         elevation: 2,
         shadowColor: Colors.black,
       ),
-      body: ListView(
-        padding: const EdgeInsets.symmetric(vertical: 20),
+      body: Column(
         children: [
-          const Padding(
-            padding: EdgeInsets.only(left: 8.0),
+          const SizedBox(
+            height: 50,
             child: Text(
               'Expolore all the places',
               style: TextStyle(
@@ -32,12 +32,27 @@ class _PlacesPageState extends State<PlacesPage> {
               ),
             ),
           ),
-          CustomButton(
-            onClicked: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) {
-                return const PaymentPage();
-              }));
-            },
+          Expanded(
+            child: StreamBuilder(
+              stream: locationsRef.snapshots(),
+              builder: (context, snapshot) {
+                if (snapshot.hasError) {
+                  return const Text('Error');
+                }
+                if (snapshot.hasData) {
+                  return ListView.builder(
+                      scrollDirection: Axis.vertical,
+                      itemCount: snapshot.data!.docs.length,
+                      itemBuilder: (context, index) {
+                        return PlaceWidget(
+                          url: snapshot.data!.docs[index]['image'],
+                          placeName: snapshot.data!.docs[index]['LocationName'],
+                        );
+                      });
+                }
+                return const Text("Loading");
+              },
+            ),
           ),
         ],
       ),
