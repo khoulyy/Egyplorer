@@ -5,9 +5,10 @@ An Egyptian Excursion App for UK Citizens.
 ### Frontend:
 - Flutter
 - Material UI
+
 ### Backend:
 - Firebase
-- Firebase Store
+- Firebase Firestore
 - Firebase Cloud Storage
 
 ## Packages:
