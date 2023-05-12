@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project/screens/successful_screen.dart';
 
-import '../components/search_activites_widget.dart';
 
 class PaymentPage extends StatelessWidget {
   const PaymentPage({super.key});
@@ -19,7 +18,6 @@ class PaymentPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            const ActivityWidget(),
             const Card(
               child: Column(
                 children: [

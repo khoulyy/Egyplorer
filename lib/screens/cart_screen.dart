@@ -4,7 +4,6 @@ import 'package:project/constants/keys.dart';
 import '../components/app_bar_widget.dart';
 import '../components/button_widget.dart';
 import '../components/nav_bar_widget.dart';
-import '../components/search_activites_widget.dart';
 import 'credit_card_input_screen.dart';
 
 class CartPage extends StatelessWidget {
@@ -23,20 +22,6 @@ class CartPage extends StatelessWidget {
           Expanded(
             child: ListView(
               children: [
-                const ActivityWidget(),
-                const ActivityWidget(),
-                const ActivityWidget(),
-                const ActivityWidget(),
-                const ActivityWidget(),
-                const ActivityWidget(),
-                const ActivityWidget(),
-                const ActivityWidget(),
-                const ActivityWidget(),
-                const ActivityWidget(),
-                const ActivityWidget(),
-                const ActivityWidget(),
-                const ActivityWidget(),
-                const ActivityWidget(),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 20),
                   child: ButtonWidget(
