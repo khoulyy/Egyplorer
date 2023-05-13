@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:project/components/date_picker.dart';
+import 'package:project/controller/Controllers.dart';
 import 'package:project/screens/signup_step3_screen.dart';
 
 import '../components/custom_button.dart';
@@ -85,6 +86,7 @@ class InfoPage extends StatelessWidget {
             ),
           ),
           CustomTextField(
+            controller: Controllers.nameController,
             labelText: 'Name',
             icon: Icons.person,
             onSubmitted: (data) async {
@@ -102,6 +104,7 @@ class InfoPage extends StatelessWidget {
             },
           ),
           CustomTextField(
+            controller: Controllers.locationController,
             labelText: 'Location',
             icon: Icons.location_pin,
             onSubmitted: (data) async {

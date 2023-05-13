@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:project/constants/keys.dart';
+import 'package:project/controller/Controllers.dart';
 
 class DateOfBirthTextField extends StatefulWidget {
   final void Function(DateTime selectedDate)? onDateChanged;
@@ -10,29 +11,29 @@ class DateOfBirthTextField extends StatefulWidget {
       : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _DateOfBirthTextFieldState createState() => _DateOfBirthTextFieldState();
 }
 
 class _DateOfBirthTextFieldState extends State<DateOfBirthTextField> {
   DateTime? _selectedDate;
   final _dateFormatter = DateFormat('yyyy-MM-dd');
-  final _textEditingController = TextEditingController();
 
   @override
   void initState() {
     super.initState();
-    _textEditingController.addListener(_onTextChange);
+    Controllers.dateOfBirthController.addListener(_onTextChange);
   }
 
   @override
   void dispose() {
-    _textEditingController.removeListener(_onTextChange);
-    _textEditingController.dispose();
+    Controllers.dateOfBirthController.removeListener(_onTextChange);
+    Controllers.dateOfBirthController.dispose();
     super.dispose();
   }
 
   void _onTextChange() {
-    final enteredDate = _textEditingController.text.trim();
+    final enteredDate = Controllers.dateOfBirthController.text.trim();
     final parsedDate = _dateFormatter.parse(enteredDate, true);
 
     if (parsedDate != _selectedDate) {
@@ -54,12 +55,12 @@ class _DateOfBirthTextFieldState extends State<DateOfBirthTextField> {
     if (picked != null && picked != _selectedDate) {
       setState(() {
         _selectedDate = picked;
-        _textEditingController.text = _dateFormatter.format(picked);
+        Controllers.dateOfBirthController.text = _dateFormatter.format(picked);
       });
       widget.onDateChanged?.call(picked);
 
       // Submit the TextFormField when "OK" is pressed
-      widget.onSubmitted?.call(_textEditingController.text);
+      widget.onSubmitted?.call(Controllers.dateOfBirthController.text);
     }
   }
 
@@ -85,7 +86,7 @@ class _DateOfBirthTextFieldState extends State<DateOfBirthTextField> {
               ),
               labelText: 'Date of Birth',
             ),
-            controller: _textEditingController,
+            controller: Controllers.dateOfBirthController,
             textInputAction: TextInputAction.done, // Set the action to done
             onFieldSubmitted: (value) {
               widget.onSubmitted?.call(value);

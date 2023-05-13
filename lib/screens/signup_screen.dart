@@ -1,8 +1,8 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:project/constants/keys.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
+import 'package:project/controller/Controllers.dart';
 import 'package:project/screens/interest_page.dart';
 import 'package:project/screens/login_screen.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -42,11 +42,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
   String? confirmPassword = '';
   bool isLoading = false;
   final GlobalKey<FormState> formKey = GlobalKey();
-  final TextEditingController passwordController = TextEditingController();
-  final TextEditingController emailController = TextEditingController();
-
-  final TextEditingController confirmPasswordController =
-      TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -94,7 +89,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         ],
                       ),
                       CustomTextField(
-                        controller: emailController,
+                        controller: Controllers.emailController,
                         onChanged: (data) {
                           email = data;
                         },
@@ -128,7 +123,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                       CustomTextField(
                         obscure: true,
-                        controller: passwordController,
+                        controller: Controllers.passwordController,
                         onChanged: (data) {
                           password = data;
                         },
@@ -162,7 +157,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                       ),
                       CustomTextField(
                         obscure: true,
-                        controller: confirmPasswordController,
+                        controller: Controllers.confirmPasswordController,
                         onChanged: (data) {
                           confirmPassword = data;
                         },
@@ -191,12 +186,6 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         onPressed: () async {
                           if (formKey.currentState!.validate()) {
                             isLoading = true;
-                            CollectionReference users =
-                                FirebaseFirestore.instance.collection('Users');
-                            Future<void> addUsers() {
-                              return users.add({'Email': emailController});
-                            }
-
                             setState(() {});
                             try {
                               await registerUser();
