@@ -9,4 +9,5 @@ class Controllers {
   static TextEditingController nameController = TextEditingController();
   static TextEditingController dateOfBirthController = TextEditingController();
   static TextEditingController locationController = TextEditingController();
+  static TextEditingController genderController = TextEditingController();
 }

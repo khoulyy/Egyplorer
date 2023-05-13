@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:project/constants/keys.dart';
-import 'package:project/controller/Controllers.dart';
+
+import '../controller/controllers.dart';
 
 class DateOfBirthTextField extends StatefulWidget {
   final void Function(DateTime selectedDate)? onDateChanged;

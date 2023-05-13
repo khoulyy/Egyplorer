@@ -54,14 +54,14 @@ class _SignUpStep3ScreenState extends State<SignUpStep3Screen> {
           const SizedBox(
             height: 20,
           ),
-          const TextField(
+          TextField(
             enabled: false,
             decoration: InputDecoration(
               prefixIcon: Padding(
-                padding: EdgeInsets.only(left: 20),
+                padding: const EdgeInsets.only(left: 20),
                 child: Text(
-                  'Gender',
-                  style: TextStyle(
+                  Controllers.genderController.text,
+                  style: const TextStyle(
                     color: Colors.grey,
                     fontSize: 25,
                   ),
