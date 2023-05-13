@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project/components/button_widget.dart';
 import 'package:project/constants/keys.dart';
-import 'package:project/controller/Controllers.dart';
+import 'package:project/controller/controllers.dart';
 import 'package:project/screens/home_screen.dart';
 
 class SignUpStep3Screen extends StatefulWidget {

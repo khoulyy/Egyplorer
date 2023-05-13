@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:project/constants/keys.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
-import 'package:project/controller/Controllers.dart';
+import 'package:project/controller/controllers.dart';
 import 'package:project/screens/interest_page.dart';
 import 'package:project/screens/login_screen.dart';
 import 'package:google_sign_in/google_sign_in.dart';

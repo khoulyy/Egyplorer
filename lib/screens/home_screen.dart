@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:project/controller/Controllers.dart';
+import 'package:project/controller/controllers.dart';
 import 'package:project/screens/places_page.dart';
 
 import '../components/custom_text_field2.dart';
