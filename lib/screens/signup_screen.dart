@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:project/constants/keys.dart';
@@ -42,6 +43,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
   bool isLoading = false;
   final GlobalKey<FormState> formKey = GlobalKey();
   final TextEditingController passwordController = TextEditingController();
+  final TextEditingController emailController = TextEditingController();
+
   final TextEditingController confirmPasswordController =
       TextEditingController();
 
@@ -91,6 +94,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         ],
                       ),
                       CustomTextField(
+                        controller: emailController,
                         onChanged: (data) {
                           email = data;
                         },
@@ -187,6 +191,12 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         onPressed: () async {
                           if (formKey.currentState!.validate()) {
                             isLoading = true;
+                            CollectionReference users =
+                                FirebaseFirestore.instance.collection('Users');
+                            Future<void> addUsers() {
+                              return users.add({'Email': emailController});
+                            }
+
                             setState(() {});
                             try {
                               await registerUser();
