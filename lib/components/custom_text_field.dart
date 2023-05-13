@@ -3,10 +3,17 @@ import 'package:flutter/material.dart';
 import '../constants/keys.dart';
 
 class CustomTextField extends StatefulWidget {
-  const CustomTextField(
-      {super.key, required this.icon, required this.labelText});
+  const CustomTextField({
+    super.key,
+    this.icon,
+    required this.labelText,
+    this.onSubmitted,
+    this.controller,
+  });
   final String? labelText;
   final IconData? icon;
+  final Function(String)? onSubmitted;
+  final TextEditingController? controller;
 
   @override
   State<CustomTextField> createState() => _CustomTextFieldState();
@@ -20,6 +27,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 8),
       child: TextField(
+        controller: widget.controller,
+        onSubmitted: widget.onSubmitted,
         onTap: () {
           setState(() {
             iconColor = kMainColor;

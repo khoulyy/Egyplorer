@@ -1,4 +1,7 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:project/components/date_picker.dart';
 import 'package:project/screens/signup_step3_screen.dart';
 
 import '../components/custom_button.dart';
@@ -12,6 +15,11 @@ class InfoPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    CollectionReference users = FirebaseFirestore.instance.collection('Users');
+    String? userId = FirebaseAuth.instance.currentUser?.uid;
+
+    DocumentReference userDocRef = users.doc(userId);
+    var currentUser = getCurrentUser();
     return Scaffold(
       appBar: AppBar(
         elevation: 2,
@@ -76,17 +84,31 @@ class InfoPage extends StatelessWidget {
               ),
             ),
           ),
-          const CustomTextField(
+          CustomTextField(
             labelText: 'Name',
             icon: Icons.person,
+            onSubmitted: (data) async {
+              await userDocRef.set({
+                'username': data,
+                'email': currentUser!.email,
+              });
+            },
           ),
-          const CustomTextField(
-            labelText: 'D.O.B',
-            icon: Icons.calendar_month,
+          DateOfBirthTextField(
+            onSubmitted: (data) {
+              userDocRef.update({
+                'Date of Birth': data,
+              });
+            },
           ),
-          const CustomTextField(
+          CustomTextField(
             labelText: 'Location',
             icon: Icons.location_pin,
+            onSubmitted: (data) async {
+              await userDocRef.update({
+                'userLocation': data,
+              });
+            },
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 150.0),
@@ -101,5 +123,10 @@ class InfoPage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  User? getCurrentUser() {
+    User? user = FirebaseAuth.instance.currentUser;
+    return user;
   }
 }
