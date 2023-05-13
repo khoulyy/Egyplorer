@@ -129,7 +129,7 @@ class _SignUpStep3ScreenState extends State<SignUpStep3Screen> {
                 onPressed: () {
                   Navigator.pushNamed(context, HomeScreen.id);
                 },
-                backgroundColor: kSecoundaryColor,
+                fontColor: kMainColor,
                 fontSize: 22,
                 width: 141,
                 height: 51,
