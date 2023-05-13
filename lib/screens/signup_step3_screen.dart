@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:project/components/button_widget.dart';
 import 'package:project/constants/keys.dart';
+import 'package:project/controller/Controllers.dart';
 import 'package:project/screens/home_screen.dart';
 
-class SignUpStep3Screen extends StatelessWidget {
+class SignUpStep3Screen extends StatefulWidget {
   const SignUpStep3Screen({super.key});
   static String id = 'SignUpStep3Screen';
+
+  @override
+  State<SignUpStep3Screen> createState() => _SignUpStep3ScreenState();
+}
+
+class _SignUpStep3ScreenState extends State<SignUpStep3Screen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,19 +43,13 @@ class SignUpStep3Screen extends StatelessWidget {
           const SizedBox(
             height: 50,
           ),
-          const CircleAvatar(
-            radius: 60,
+          Text(
+            Controllers.nameController.text,
+            style: const TextStyle(fontSize: 22),
           ),
-          const SizedBox(
-            height: 20,
-          ),
-          const Text(
-            'name',
-            style: TextStyle(fontSize: 22),
-          ),
-          const Text(
-            'location info',
-            style: TextStyle(fontSize: 17),
+          Text(
+            Controllers.locationController.text,
+            style: const TextStyle(fontSize: 17),
           ),
           const SizedBox(
             height: 20,
@@ -72,14 +73,14 @@ class SignUpStep3Screen extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
-          const TextField(
+          TextField(
             enabled: false,
             decoration: InputDecoration(
               prefixIcon: Padding(
-                padding: EdgeInsets.only(left: 20),
+                padding: const EdgeInsets.only(left: 20),
                 child: Text(
-                  'D.O.B',
-                  style: TextStyle(
+                  Controllers.dateOfBirthController.text,
+                  style: const TextStyle(
                     color: Colors.grey,
                     fontSize: 25,
                   ),

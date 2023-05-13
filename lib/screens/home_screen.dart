@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:project/controller/Controllers.dart';
 import 'package:project/screens/places_page.dart';
 
 import '../components/custom_text_field2.dart';
@@ -29,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         elevation: 0,
         centerTitle: true,
-        title: const Text('Welcome, Ahmed'),
+        title: Text('Welcome, ${Controllers.nameController.text}'),
         actions: [
           IconButton(
             onPressed: () {
