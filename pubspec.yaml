@@ -44,6 +44,7 @@ dependencies:
   cloud_firestore: ^4.6.0
   syncfusion_flutter_datepicker: ^21.2.4
   intl: ^0.18.1
+  icon_broken: ^1.1.0
 
 dev_dependencies:
   flutter_test:

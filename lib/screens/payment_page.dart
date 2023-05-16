@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project/screens/successful_screen.dart';
 
-
 class PaymentPage extends StatelessWidget {
   const PaymentPage({super.key});
   static String id = 'PaymentPage';
@@ -10,6 +9,7 @@ class PaymentPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Text('Payment Review'),
         elevation: 2,
         shadowColor: Colors.black,
       ),

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:project/helper/show_snack_bar.dart';
 import 'package:project/screens/home_screen.dart';
+import 'package:project/screens/layout_screen.dart';
 import 'package:project/screens/signup_screen.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
@@ -175,7 +176,7 @@ class _LogInScreenState extends State<LogInScreen> {
                                   // ignore: use_build_context_synchronously
                                   showSnackBar(context, message: 'Success!');
                                   // ignore: use_build_context_synchronously
-                                  Navigator.pushNamed(context, HomeScreen.id);
+                                  Navigator.pushNamed(context, LayoutScreen.id);
                                 } on FirebaseAuthException catch (ex) {
                                   if (ex.code == 'user-not-found') {
                                     ScaffoldMessenger.of(context).showSnackBar(

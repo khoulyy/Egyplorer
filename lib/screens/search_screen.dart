@@ -1,9 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:project/components/search_activites_widget.dart';
-import 'package:project/constants/keys.dart';
-
-import '../components/app_bar_widget.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -19,8 +16,6 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const PreferredSize(
-          preferredSize: kPreferredSize, child: AppBarWidget()),
       body: StreamBuilder(
         stream: activityRef.snapshots(),
         builder: (context, snapshot) {

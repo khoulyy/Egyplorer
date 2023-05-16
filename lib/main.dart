@@ -7,6 +7,7 @@ import 'package:project/screens/get_started_screen.dart';
 import 'package:project/screens/home_screen.dart';
 import 'package:project/screens/info_page.dart';
 import 'package:project/screens/interest_page.dart';
+import 'package:project/screens/layout_screen.dart';
 import 'package:project/screens/login_screen.dart';
 import 'package:project/screens/payment_page.dart';
 import 'package:project/screens/places_page.dart';
@@ -57,6 +58,7 @@ class ExcursionApp extends StatelessWidget {
         PaymentScreen.id: (context) => const PaymentScreen(),
         PaymentPage.id: (context) => const PaymentPage(),
         SucssesfulScreen.id: (context) => const SucssesfulScreen(),
+        LayoutScreen.id: (context) => const LayoutScreen(),
       },
     );
   }

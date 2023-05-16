@@ -1,14 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:project/controller/controllers.dart';
-import 'package:project/screens/places_page.dart';
 
 import '../components/custom_text_field2.dart';
-import '../components/nav_bar_widget.dart';
 import '../components/container_signin_login.dart';
-import 'cart_screen.dart';
-import 'search_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -26,20 +20,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      bottomNavigationBar: const NavBarWidget(),
-      appBar: AppBar(
-        elevation: 0,
-        centerTitle: true,
-        title: Text('Welcome, ${Controllers.nameController.text}'),
-        actions: [
-          IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, CartPage.id);
-            },
-            icon: const Icon(FontAwesomeIcons.cartShopping),
-          ),
-        ],
-      ),
       body: ListView(
         children: [
           Column(
@@ -62,17 +42,6 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(
                 height: 10,
               ),
-              const Row(
-                children: [
-                  Text(
-                    '   Diving and Hiking',
-                    style: TextStyle(
-                      fontSize: 25,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ],
-              ),
               const SizedBox(
                 height: 20,
               ),
@@ -88,26 +57,17 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(
                 height: 20,
               ),
-              Row(
+              const Row(
                 children: [
-                  const Text(
+                  Text(
                     '     popular Activities',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 160,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, SearchScreen.id);
-                    },
-                    child: const Text(
-                      'see all',
-                      style: TextStyle(color: Colors.blueAccent),
-                    ),
                   ),
                 ],
               ),
@@ -115,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 10,
               ),
               SizedBox(
-                height: 200,
+                height: 210,
                 child: StreamBuilder(
                   stream: activityRef.snapshots(),
                   builder: (context, snapshot) {
@@ -125,11 +85,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     if (snapshot.hasData) {
                       return ListView.builder(
                           scrollDirection: Axis.horizontal,
-                          itemCount: snapshot.data!.docs.length,
+                          itemCount: 5,
                           itemBuilder: (context, index) {
                             return CustomContainer(
-                                height: 130,
-                                width: 250,
+                                height: 200,
+                                width: 300,
                                 firstText:
                                     '${snapshot.data!.docs[index]['Location']}',
                                 secoundText:
@@ -144,34 +104,25 @@ class _HomeScreenState extends State<HomeScreen> {
               const SizedBox(
                 height: 15,
               ),
-              Row(
+              const Row(
                 children: [
-                  const Text(
+                  Text(
                     '    popular places',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  const SizedBox(
+                  SizedBox(
                     width: 190,
                   ),
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, PlacesPage.id);
-                    },
-                    child: const Text(
-                      'see all',
-                      style: TextStyle(color: Colors.blueAccent),
-                    ),
-                  ),
-                  const SizedBox(
+                  SizedBox(
                     height: 5,
                   ),
                 ],
               ),
               SizedBox(
-                height: 170,
+                height: 200,
                 child: StreamBuilder(
                   stream: locationsRef.snapshots(),
                   builder: (context, snapshot) {
@@ -181,11 +132,11 @@ class _HomeScreenState extends State<HomeScreen> {
                     if (snapshot.hasData) {
                       return ListView.builder(
                           scrollDirection: Axis.horizontal,
-                          itemCount: snapshot.data!.docs.length,
+                          itemCount: 5,
                           itemBuilder: (context, index) {
                             return CustomContainer(
-                                height: 130,
-                                width: 250,
+                                height: 200,
+                                width: 300,
                                 firstText:
                                     '${snapshot.data!.docs[index]['LocationName']}',
                                 url: '${snapshot.data!.docs[index]['image']}');

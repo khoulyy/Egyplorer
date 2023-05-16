@@ -16,10 +16,6 @@ class _PlacesPageState extends State<PlacesPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        elevation: 2,
-        shadowColor: Colors.black,
-      ),
       body: Column(
         children: [
           const SizedBox(
