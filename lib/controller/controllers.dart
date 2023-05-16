@@ -11,3 +11,7 @@ class Controllers {
   static TextEditingController locationController = TextEditingController();
   static TextEditingController genderController = TextEditingController();
 }
+
+class PageVeiwController {
+  static PageController pageController = PageController(initialPage: 0);
+}

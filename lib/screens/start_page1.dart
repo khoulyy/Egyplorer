@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:project/constants/keys.dart';
-import 'package:project/screens/start_page2.dart';
 
 class StartPage1Screen extends StatelessWidget {
   const StartPage1Screen({super.key});
@@ -29,32 +28,24 @@ class StartPage1Screen extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            const Text('Formulate your strategy to receive '),
+            const Text(
+              'Formulate your strategy to receive ',
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
             const SizedBox(
               height: 3,
             ),
-            const Text('wonderful gift packs'),
+            const Text(
+              'wonderful gift packs',
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
             const SizedBox(
               height: 30,
             ),
-            Container(
-                height: 60,
-                width: 60,
-                decoration: const BoxDecoration(
-                  color: Colors.lightBlue,
-                  shape: BoxShape.circle,
-                ),
-                child: IconButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) {
-                        return const StartPage2Screen();
-                      }));
-                    },
-                    icon: const Icon(
-                      Icons.navigate_next_rounded,
-                      color: Colors.white,
-                    ))),
             const Spacer(
               flex: 1,
             ),

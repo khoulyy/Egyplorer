@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project/constants/keys.dart';
-import 'package:project/screens/start_page1.dart';
+import 'package:project/screens/start_pages.dart';
 
 import '../components/button_widget.dart';
 
@@ -60,7 +60,7 @@ class GetStartedScreen extends StatelessWidget {
             ),
             ButtonWidget(
               onPressed: () {
-                Navigator.pushNamed(context, StartPage1Screen.id);
+                Navigator.pushNamed(context, StartPages.id);
               },
               height: 55,
               width: 269,

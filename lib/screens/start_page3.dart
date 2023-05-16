@@ -30,11 +30,21 @@ class StartPage3Screen extends StatelessWidget {
             const SizedBox(
               height: 25,
             ),
-            const Text("The world's first-class modern leisure "),
+            const Text(
+              "The world's first-class modern leisure ",
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
             const SizedBox(
               height: 3,
             ),
-            const Text('and entertainment method'),
+            const Text(
+              'and entertainment method',
+              style: TextStyle(
+                fontSize: 20,
+              ),
+            ),
             const SizedBox(
               height: 30,
             ),

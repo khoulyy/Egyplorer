@@ -18,6 +18,7 @@ import 'package:project/screens/signup_step3_screen.dart';
 import 'package:project/screens/start_page1.dart';
 import 'package:project/screens/start_page2.dart';
 import 'package:project/screens/start_page3.dart';
+import 'package:project/screens/start_pages.dart';
 import 'package:project/screens/successful_screen.dart';
 
 void main() async {
@@ -42,6 +43,7 @@ class ExcursionApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         GetStartedScreen.id: (context) => const GetStartedScreen(),
+        StartPages.id: (context) => const StartPages(),
         StartPage1Screen.id: (context) => const StartPage1Screen(),
         StartPage2Screen.id: (context) => const StartPage2Screen(),
         StartPage3Screen.id: (context) => const StartPage3Screen(),
