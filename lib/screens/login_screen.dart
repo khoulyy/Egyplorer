@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:project/helper/show_snack_bar.dart';
-import 'package:project/screens/home_screen.dart';
 import 'package:project/screens/layout_screen.dart';
 import 'package:project/screens/signup_screen.dart';
 import 'package:google_sign_in/google_sign_in.dart';
@@ -211,7 +210,7 @@ class _LogInScreenState extends State<LogInScreen> {
                                 onTap: () async {
                                   await signInWithGoogle();
                                   // ignore: use_build_context_synchronously
-                                  Navigator.pushNamed(context, HomeScreen.id);
+                                  Navigator.pushNamed(context, LayoutScreen.id);
                                   // ignore: use_build_context_synchronously
                                 },
                                 child: Card(

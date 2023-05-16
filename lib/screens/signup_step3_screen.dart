@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:project/components/button_widget.dart';
 import 'package:project/constants/keys.dart';
 import 'package:project/controller/controllers.dart';
-import 'package:project/screens/home_screen.dart';
+import 'package:project/screens/layout_screen.dart';
 
 class SignUpStep3Screen extends StatefulWidget {
   const SignUpStep3Screen({super.key});
@@ -127,7 +127,7 @@ class _SignUpStep3ScreenState extends State<SignUpStep3Screen> {
               ),
               ButtonWidget(
                 onPressed: () {
-                  Navigator.pushNamed(context, HomeScreen.id);
+                  Navigator.pushNamed(context, LayoutScreen.id);
                 },
                 fontColor: kMainColor,
                 fontSize: 22,
