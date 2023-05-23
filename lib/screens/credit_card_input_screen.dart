@@ -13,20 +13,25 @@ class PaymentScreen extends StatefulWidget {
 }
 
 class _PaymentScreenState extends State<PaymentScreen> {
-  final _formKey = GlobalKey<FormState>();
-  final _cardNumberController = TextEditingController();
-  final _expiryMonthController = TextEditingController();
-  final _expiryYearController = TextEditingController();
-  final _cvvController = TextEditingController();
-  final _cardHolderNameController = TextEditingController();
+  final formKey = GlobalKey<FormState>();
+  final cardNumberController = TextEditingController();
+  final expiryMonthController = TextEditingController();
+  final expiryYearController = TextEditingController();
+  final cvvController = TextEditingController();
+  final cardHolderNameController = TextEditingController();
+  String? cardNumber;
+  String? expMonth;
+  String? expYear;
+  String? cvv;
+  String? cardHolderName;
 
   @override
   void dispose() {
-    _cardNumberController.dispose();
-    _expiryMonthController.dispose();
-    _expiryYearController.dispose();
-    _cvvController.dispose();
-    _cardHolderNameController.dispose();
+    cardNumberController.dispose();
+    expiryMonthController.dispose();
+    expiryYearController.dispose();
+    cvvController.dispose();
+    cardHolderNameController.dispose();
     super.dispose();
   }
 
@@ -39,7 +44,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Form(
-          key: _formKey,
+          key: formKey,
           child: SingleChildScrollView(
             child: Column(
               children: [
@@ -51,33 +56,39 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 TextFormField(
                   obscureText: true,
                   obscuringCharacter: 'x',
-                  controller: _cardNumberController,
+                  controller: cardNumberController,
+                  onChanged: (data) {
+                    cardNumber = data;
+                  },
+                  validator: (data) {
+                    if (data!.isEmpty) {
+                      return 'Please enter your card number';
+                    }
+                    return null;
+                  },
                   decoration: const InputDecoration(
                     suffixIcon: Icon(Icons.credit_card),
                     labelText: 'Card Number',
                     hintText: 'Enter your card number',
                     border: OutlineInputBorder(),
                   ),
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return 'Please enter your card number';
-                    }
-                    return null;
-                  },
                 ),
                 const SizedBox(height: 16.0),
                 Row(
                   children: [
                     Expanded(
                       child: TextFormField(
-                        controller: _expiryMonthController,
+                        onChanged: (value) {
+                          expMonth = value;
+                        },
+                        controller: expiryMonthController,
                         decoration: const InputDecoration(
                           labelText: 'Expiration Month',
                           hintText: 'MM',
                           border: OutlineInputBorder(),
                         ),
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
+                        validator: (data) {
+                          if (data!.isEmpty) {
                             return 'Please enter the expiration month';
                           }
                           return null;
@@ -87,7 +98,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     const SizedBox(width: 16.0),
                     Expanded(
                       child: TextFormField(
-                        controller: _expiryYearController,
+                        controller: expiryYearController,
                         decoration: const InputDecoration(
                           labelText: 'Expiration Year',
                           hintText: 'YY',
@@ -104,7 +115,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                     const SizedBox(width: 16.0),
                     Expanded(
                       child: TextFormField(
-                        controller: _cvvController,
+                        controller: cvvController,
                         decoration: const InputDecoration(
                           labelText: 'CVV/CVC',
                           hintText: 'Enter CVV/CVC',
@@ -122,7 +133,7 @@ class _PaymentScreenState extends State<PaymentScreen> {
                 ),
                 const SizedBox(height: 16.0),
                 TextFormField(
-                  controller: _cardHolderNameController,
+                  controller: cardHolderNameController,
                   decoration: const InputDecoration(
                     labelText: 'Card Holder Name',
                     hintText: 'Enter card holder name',

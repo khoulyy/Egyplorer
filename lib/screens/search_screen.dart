@@ -43,7 +43,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       "price": '${snapshot.data!.docs[index]['Price']}',
                     };
                     if (cart.contains(activityItem)) {
-                      print('this item is already in cart');
+                      return print('this item is already in cart');
                     } else {
                       cart.add(activityItem);
                     }

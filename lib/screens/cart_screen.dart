@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:project/components/button_widget.dart';
+import 'package:project/screens/credit_card_input_screen.dart';
 import 'package:project/screens/search_screen.dart';
 
 import '../components/search_activites_widget.dart';
-
-// Cart cart = Cart();
 
 class CartPage extends StatefulWidget {
   const CartPage({super.key});
@@ -12,6 +12,8 @@ class CartPage extends StatefulWidget {
   @override
   State<CartPage> createState() => _CartPageState();
 }
+
+var paymentReview = [];
 
 class _CartPageState extends State<CartPage> {
   @override
@@ -40,6 +42,20 @@ class _CartPageState extends State<CartPage> {
                   price: cart[index]['price'],
                 );
               },
+            ),
+            Padding(
+              padding: const EdgeInsets.only(bottom: 30),
+              child: ButtonWidget(
+                onPressed: () {
+                  Navigator.pushNamed(context, PaymentScreen.id);
+                },
+                height: 60,
+                width: 158,
+                text: 'Checkout',
+                backgroundColor: Colors.blue,
+                fontColor: Colors.white,
+                fontSize: 20,
+              ),
             )
           ],
         ),
