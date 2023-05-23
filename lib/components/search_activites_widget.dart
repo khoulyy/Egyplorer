@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class ActivityWidget extends StatelessWidget {
   const ActivityWidget({
@@ -9,6 +8,9 @@ class ActivityWidget extends StatelessWidget {
     this.url,
     this.activityLocation,
     this.price,
+    this.onPressed,
+    this.text,
+    this.icon,
   });
 
   final String? url;
@@ -16,6 +18,9 @@ class ActivityWidget extends StatelessWidget {
   final String? duration;
   final String? activityLocation;
   final String? price;
+  final String? text;
+  final IconData? icon;
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -69,13 +74,14 @@ class ActivityWidget extends StatelessWidget {
                           child: Row(
                             children: [
                               ElevatedButton(
-                                onPressed: () {},
-                                child: const Row(
+                                onPressed: onPressed,
+                                child: Row(
                                   children: [
-                                    Text('Add to cart'),
-                                    Icon(
-                                      FontAwesomeIcons.cartShopping,
+                                    Text('$text'),
+                                    const SizedBox(
+                                      width: 5,
                                     ),
+                                    Icon(icon),
                                   ],
                                 ),
                               ),
