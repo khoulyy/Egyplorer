@@ -33,13 +33,6 @@ class _PaymentPageState extends State<PaymentPage> {
                 itemCount: cart.length,
                 itemBuilder: (context, index) {
                   return ActivityWidget(
-                    text: 'Remove',
-                    icon: Icons.remove_circle,
-                    onPressed: () {
-                      setState(() {
-                        cart.removeAt(cart.indexOf(cart[index]));
-                      });
-                    },
                     url: cart[index]['url'],
                     activityName: cart[index]['activityName'],
                     activityLocation: cart[index]['activityLocation'],

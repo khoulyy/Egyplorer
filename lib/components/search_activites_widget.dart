@@ -20,6 +20,7 @@ class ActivityWidget extends StatelessWidget {
   final String? price;
   final String? text;
   final IconData? icon;
+
   final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
