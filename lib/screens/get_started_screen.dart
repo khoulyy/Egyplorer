@@ -26,7 +26,7 @@ class GetStartedScreen extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 50),
-            Image.asset('assets/images/Beach_Monochromatic 1.png'),
+            Image.asset('assets/images/logo.png'),
             const Spacer(flex: 1),
             const Text(
               'The best Excursion App for UK citizens ',
