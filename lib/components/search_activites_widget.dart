@@ -79,9 +79,6 @@ class ActivityWidget extends StatelessWidget {
                                 child: Row(
                                   children: [
                                     Text('$text'),
-                                    const SizedBox(
-                                      width: 5,
-                                    ),
                                     Icon(icon),
                                   ],
                                 ),
