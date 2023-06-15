@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:project/constants/keys.dart';
-import 'package:project/screens/start_pages.dart';
 
-import '../components/button_widget.dart';
+import 'package:project/view/screens/start_pages.dart';
+
+import '../../components/button_widget.dart';
 
 class GetStartedScreen extends StatelessWidget {
   const GetStartedScreen({super.key});
