@@ -3,12 +3,12 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:project/components/date_picker.dart';
 import 'package:project/controller/controllers.dart';
-import 'package:project/screens/signup_step3_screen.dart';
+import 'package:project/view/screens/signup_step3_screen.dart';
 
-import '../components/custom_button.dart';
-import '../components/custom_radio_button.dart';
-import '../components/custom_text_field.dart';
-import '../constants/keys.dart';
+import '../../components/custom_button.dart';
+import '../../components/custom_radio_button.dart';
+import '../../components/custom_text_field.dart';
+import '../../constants/keys.dart';
 
 class InfoPage extends StatelessWidget {
   const InfoPage({super.key});

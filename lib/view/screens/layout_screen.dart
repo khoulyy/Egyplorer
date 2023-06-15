@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:project/screens/cart_screen.dart';
-import 'package:project/screens/home_screen.dart';
-import 'package:project/screens/places_page.dart';
-import 'package:project/screens/search_screen.dart';
+import 'package:project/view/screens/cart_screen.dart';
+import 'package:project/view/screens/home_screen.dart';
+import 'package:project/view/screens/places_page.dart';
+import 'package:project/view/screens/search_screen.dart';
 
 class LayoutScreen extends StatefulWidget {
   const LayoutScreen({super.key});

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 import '../controller/controllers.dart';
-import '../screens/start_page1.dart';
-import '../screens/start_page2.dart';
-import '../screens/start_page3.dart';
+import '../view/screens/start_page1.dart';
+import '../view/screens/start_page2.dart';
+import '../view/screens/start_page3.dart';
 
 class PageViewWidget extends StatelessWidget {
   const PageViewWidget({super.key});

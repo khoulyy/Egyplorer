@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 
-import '../components/custom_text_field2.dart';
-import '../components/container_signin_login.dart';
+import '../../components/custom_text_field2.dart';
+import '../../components/container_signin_login.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

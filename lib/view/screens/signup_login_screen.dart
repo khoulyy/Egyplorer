@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:project/constants/keys.dart';
 
-import '../components/button_widget.dart';
+import '../../components/button_widget.dart';
 import 'login_screen.dart';
 import 'signup_screen.dart';
 

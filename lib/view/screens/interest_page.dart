@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:like_button/like_button.dart';
-import '../components/custom_button.dart';
-import '../components/custom_check_box.dart';
+import '../../components/custom_button.dart';
+import '../../components/custom_check_box.dart';
 import 'info_page.dart';
 
 class InterestPage extends StatelessWidget {

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:project/components/button_widget.dart';
-import 'package:project/screens/credit_card_input_screen.dart';
-import 'package:project/screens/search_screen.dart';
+import 'package:project/view/screens/credit_card_input_screen.dart';
+import 'package:project/view/screens/search_screen.dart';
 
-import '../components/search_activites_widget.dart';
+import '../../components/search_activites_widget.dart';
 
 class CartPage extends StatefulWidget {
   const CartPage({super.key});

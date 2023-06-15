@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project/constants/keys.dart';
-import 'package:project/screens/signup_login_screen.dart';
+import 'package:project/view/screens/signup_login_screen.dart';
 
 class StartPage3Screen extends StatelessWidget {
   const StartPage3Screen({super.key});

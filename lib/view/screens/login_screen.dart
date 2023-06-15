@@ -3,13 +3,13 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:project/helper/show_snack_bar.dart';
-import 'package:project/screens/layout_screen.dart';
-import 'package:project/screens/signup_screen.dart';
+import 'package:project/view/screens/layout_screen.dart';
+import 'package:project/view/screens/signup_screen.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-import '../components/button_widget.dart';
-import '../components/custom_text_field2.dart';
-import '../constants/keys.dart';
+import '../../components/button_widget.dart';
+import '../../components/custom_text_field2.dart';
+import '../../constants/keys.dart';
 
 // ignore: must_be_immutable
 class LogInScreen extends StatefulWidget {

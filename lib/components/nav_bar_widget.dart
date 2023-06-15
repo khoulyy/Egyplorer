@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
-import '../screens/cart_screen.dart';
+import '../view/screens/cart_screen.dart';
 
 class NavBarWidget extends StatelessWidget {
   const NavBarWidget({super.key});

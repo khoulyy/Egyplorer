@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:project/screens/search_screen.dart';
-import 'package:project/screens/successful_screen.dart';
+import 'package:project/view/screens/search_screen.dart';
+import 'package:project/view/screens/successful_screen.dart';
 
-import '../components/search_activites_widget.dart';
+import '../../components/search_activites_widget.dart';
 
 class PaymentPage extends StatefulWidget {
   const PaymentPage({super.key});
