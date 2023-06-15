@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:project/constants/keys.dart';
 import 'package:project/screens/payment_page.dart';
 
 import '../components/button_widget.dart';
@@ -47,12 +46,16 @@ class _PaymentScreenState extends State<PaymentScreen> {
           key: formKey,
           child: SingleChildScrollView(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
+                Image.asset(
+                  'assets/images/credit_card.png',
+                  width: 300,
+                ),
                 Text(
                   'Payment Details',
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
-                const SizedBox(height: 16.0),
                 TextFormField(
                   obscureText: true,
                   obscuringCharacter: 'x',
@@ -151,8 +154,8 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   onPressed: () {
                     Navigator.pushNamed(context, PaymentPage.id);
                   },
-                  text: 'dd',
-                  backgroundColor: kMainColor,
+                  text: 'Complete to checkout',
+                  fontSize: 20,
                   height: 50,
                   width: 345,
                 ),
