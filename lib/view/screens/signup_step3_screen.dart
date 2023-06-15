@@ -54,22 +54,6 @@ class _SignUpStep3ScreenState extends State<SignUpStep3Screen> {
           const SizedBox(
             height: 20,
           ),
-          TextField(
-            enabled: false,
-            decoration: InputDecoration(
-              prefixIcon: Padding(
-                padding: const EdgeInsets.only(left: 20),
-                child: Text(
-                  Controllers.genderController.text,
-                  style: const TextStyle(
-                    color: Colors.grey,
-                    fontSize: 25,
-                  ),
-                  textAlign: TextAlign.start,
-                ),
-              ),
-            ),
-          ),
           const SizedBox(
             height: 15,
           ),
@@ -92,22 +76,6 @@ class _SignUpStep3ScreenState extends State<SignUpStep3Screen> {
           const SizedBox(
             height: 15,
           ),
-          const TextField(
-            enabled: false,
-            decoration: InputDecoration(
-              prefixIcon: Padding(
-                padding: EdgeInsets.only(left: 20),
-                child: Text(
-                  'Intersts',
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 25,
-                  ),
-                  textAlign: TextAlign.start,
-                ),
-              ),
-            ),
-          ),
           const SizedBox(
             height: 50,
           ),
@@ -116,7 +84,12 @@ class _SignUpStep3ScreenState extends State<SignUpStep3Screen> {
               Padding(
                 padding: const EdgeInsets.only(left: 50),
                 child: ButtonWidget(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   fontSize: 22,
+                  backgroundColor: kMainColor,
+                  fontColor: kSecoundaryColor,
                   width: 141,
                   height: 51,
                   text: 'Edit',
@@ -130,6 +103,7 @@ class _SignUpStep3ScreenState extends State<SignUpStep3Screen> {
                   Navigator.pushNamed(context, LayoutScreen.id);
                 },
                 fontColor: kMainColor,
+                backgroundColor: kSecoundaryColor,
                 fontSize: 22,
                 width: 141,
                 height: 51,
