@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project/constants/keys.dart';
 
 import 'package:project/view/screens/payment_page.dart';
 
@@ -159,6 +160,9 @@ class _PaymentScreenState extends State<PaymentScreen> {
                   fontSize: 20,
                   height: 50,
                   width: 345,
+                  fontColor: kWhiteColor,
+                  fontWeight: FontWeight.bold,
+                  backgroundColor: kGreenColor,
                 ),
               ],
             ),

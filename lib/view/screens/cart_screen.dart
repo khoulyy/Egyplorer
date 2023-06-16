@@ -44,7 +44,7 @@ class _CartPageState extends State<CartPage> {
               },
             ),
             Padding(
-              padding: const EdgeInsets.only(bottom: 30),
+              padding: const EdgeInsets.only(bottom: 30, top: 10),
               child: ButtonWidget(
                 onPressed: () {
                   Navigator.pushNamed(context, PaymentScreen.id);
@@ -56,7 +56,7 @@ class _CartPageState extends State<CartPage> {
                 fontColor: Colors.white,
                 fontSize: 20,
               ),
-            )
+            ),
           ],
         ),
       ),

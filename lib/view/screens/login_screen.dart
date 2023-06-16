@@ -197,8 +197,10 @@ class _LogInScreenState extends State<LogInScreen> {
                             },
                             height: 60,
                             width: 158,
-                            text: ' LogIn',
+                            text: ' Log In',
                             fontSize: 20,
+                            fontColor: kGreenColor,
+                            fontWeight: FontWeight.bold,
                           ),
                           const SizedBox(
                             height: 20,

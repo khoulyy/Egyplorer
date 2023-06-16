@@ -82,7 +82,7 @@ class _DateOfBirthTextFieldState extends State<DateOfBirthTextField> {
                 child: Icon(
                   Icons.date_range_outlined,
                   size: 30,
-                  color: kMainColor,
+                  color: kBlueColor,
                 ),
               ),
               labelText: 'Date of Birth',

@@ -2,21 +2,25 @@ import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
 class ButtonWidget extends StatelessWidget {
-  ButtonWidget(
-      {super.key,
-      this.onPressed,
-      this.height,
-      this.width,
-      this.text,
-      this.fontSize,
-      this.backgroundColor,
-      this.fontColor});
+  ButtonWidget({
+    super.key,
+    this.onPressed,
+    this.height,
+    this.width,
+    this.text,
+    this.fontSize,
+    this.backgroundColor,
+    this.fontColor,
+    this.fontWeight,
+  });
   VoidCallback? onPressed;
   double? height, width;
   String? text;
   double? fontSize;
   Color? backgroundColor;
   Color? fontColor;
+  FontWeight? fontWeight;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -27,10 +31,13 @@ class ButtonWidget extends StatelessWidget {
         ),
         child: ElevatedButton(
           onPressed: onPressed,
-          style: ElevatedButton.styleFrom(backgroundColor: backgroundColor),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: backgroundColor,
+          ),
           child: Text(
             text!,
-            style: TextStyle(fontSize: fontSize, color: fontColor),
+            style: TextStyle(
+                fontSize: fontSize, color: fontColor, fontWeight: fontWeight),
           ),
         ));
   }

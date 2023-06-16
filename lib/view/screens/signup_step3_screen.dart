@@ -88,8 +88,9 @@ class _SignUpStep3ScreenState extends State<SignUpStep3Screen> {
                     Navigator.pop(context);
                   },
                   fontSize: 22,
-                  backgroundColor: kMainColor,
-                  fontColor: kSecoundaryColor,
+                  fontWeight: FontWeight.bold,
+                  backgroundColor: kWhiteColor,
+                  fontColor: kGreenColor,
                   width: 141,
                   height: 51,
                   text: 'Edit',
@@ -102,8 +103,9 @@ class _SignUpStep3ScreenState extends State<SignUpStep3Screen> {
                 onPressed: () {
                   Navigator.pushNamed(context, LayoutScreen.id);
                 },
-                fontColor: kMainColor,
-                backgroundColor: kSecoundaryColor,
+                fontColor: kWhiteColor,
+                fontWeight: FontWeight.bold,
+                backgroundColor: kGreenColor,
                 fontSize: 22,
                 width: 141,
                 height: 51,

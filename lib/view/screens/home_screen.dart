@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:project/controller/controllers.dart';
 
 import '../../components/container_signin_login.dart';
 
@@ -24,6 +25,14 @@ class _HomeScreenState extends State<HomeScreen> {
           Column(
             children: [
               const SizedBox(
+                height: 15,
+              ),
+              Text(
+                'welcome, ${Controllers.nameController.text}',
+                style:
+                    const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
+              const SizedBox(
                 height: 25,
               ),
               const Row(
@@ -32,25 +41,19 @@ class _HomeScreenState extends State<HomeScreen> {
                     '    find your next trip',
                     style: TextStyle(
                       fontSize: 20,
-                      color: Colors.grey,
-                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
                     ),
                   ),
                 ],
               ),
               const SizedBox(
-                height: 10,
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              const SizedBox(
                 height: 20,
               ),
               const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    '     popular Activities',
+                    'popular Activities',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -95,9 +98,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 15,
               ),
               const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
-                    '    popular places',
+                    'popular places',
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,

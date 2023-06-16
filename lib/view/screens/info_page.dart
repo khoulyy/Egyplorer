@@ -56,7 +56,7 @@ class InfoPage extends StatelessWidget {
             margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             height: 30,
             decoration: BoxDecoration(
-              color: kSecoundaryColor,
+              color: kGreenColor,
               borderRadius: BorderRadius.circular(20),
             ),
             child: const Center(
@@ -73,7 +73,7 @@ class InfoPage extends StatelessWidget {
             margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
             height: 30,
             decoration: BoxDecoration(
-              color: kSecoundaryColor,
+              color: kGreenColor,
               borderRadius: BorderRadius.circular(20),
             ),
             child: const Center(

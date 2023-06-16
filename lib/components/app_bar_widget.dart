@@ -8,23 +8,23 @@ class AppBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  AppBar(
+    return AppBar(
       shadowColor: Colors.black,
-  title:const Text('Welcome',style: TextStyle(
-    color: Colors.black
-  ),) ,
-  centerTitle: true,
-  iconTheme: const IconThemeData(
-    color: Colors.black
-  ),
- scrolledUnderElevation: 15,
-  elevation: 4,
-  backgroundColor: kSecoundaryColor,
-  actions: [
-    IconButton(
-      color: Colors.black,
-      onPressed: () {}, icon: const Icon(FontAwesomeIcons.cartShopping))
-  ],
-);
+      title: const Text(
+        'Welcome',
+        style: TextStyle(color: Colors.black),
+      ),
+      centerTitle: true,
+      iconTheme: const IconThemeData(color: Colors.black),
+      scrolledUnderElevation: 15,
+      elevation: 4,
+      backgroundColor: kGreenColor,
+      actions: [
+        IconButton(
+            color: Colors.black,
+            onPressed: () {},
+            icon: const Icon(FontAwesomeIcons.cartShopping))
+      ],
+    );
   }
 }

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:project/components/button_widget.dart';
+import 'package:project/constants/keys.dart';
 import 'package:project/view/screens/search_screen.dart';
 import 'package:project/view/screens/successful_screen.dart';
 
@@ -11,6 +13,8 @@ class PaymentPage extends StatefulWidget {
   @override
   State<PaymentPage> createState() => _PaymentPageState();
 }
+
+var paymentReview = [];
 
 class _PaymentPageState extends State<PaymentPage> {
   @override
@@ -33,6 +37,13 @@ class _PaymentPageState extends State<PaymentPage> {
                 itemCount: cart.length,
                 itemBuilder: (context, index) {
                   return ActivityWidget(
+                    text: 'remove ',
+                    icon: Icons.remove_circle,
+                    onPressed: () {
+                      setState(() {
+                        cart.removeAt(cart.indexOf(cart[index]));
+                      });
+                    },
                     url: cart[index]['url'],
                     activityName: cart[index]['activityName'],
                     activityLocation: cart[index]['activityLocation'],
@@ -41,33 +52,20 @@ class _PaymentPageState extends State<PaymentPage> {
                   );
                 },
               ),
-              const Card(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Icon(
-                      Icons.credit_card,
-                      size: 50,
-                    ),
-                    Text(
-                      'XXXX XXXX XXXX 2473',
-                      style: TextStyle(fontSize: 18),
-                    ),
-                  ],
-                ),
-              ),
               Padding(
-                padding: const EdgeInsets.only(bottom: 20, top: 20),
-                child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, SucssesfulScreen.id);
-                  },
-                  child: const Text(
-                    "Confirm Payment",
-                    style: TextStyle(fontSize: 20),
-                  ),
-                ),
-              ),
+                  padding: const EdgeInsets.only(bottom: 20, top: 20),
+                  child: ButtonWidget(
+                    height: 50,
+                    width: 345,
+                    text: 'confirm payment ',
+                    backgroundColor: kWhiteColor,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    fontColor: kGreenColor,
+                    onPressed: () {
+                      Navigator.pushNamed(context, SucssesfulScreen.id);
+                    },
+                  )),
             ],
           ),
         ),

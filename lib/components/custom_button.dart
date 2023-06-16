@@ -16,7 +16,7 @@ class CustomButton extends StatelessWidget {
       height: 50,
       child: ElevatedButton(
         style: const ButtonStyle(
-          backgroundColor: MaterialStatePropertyAll(kMainColor),
+          backgroundColor: MaterialStatePropertyAll(kBlueColor),
         ),
         onPressed: onClicked,
         child: const Text(

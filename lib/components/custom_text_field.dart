@@ -31,7 +31,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
         onSubmitted: widget.onSubmitted,
         onTap: () {
           setState(() {
-            iconColor = kMainColor;
+            iconColor = kBlueColor;
           });
         },
         decoration: InputDecoration(

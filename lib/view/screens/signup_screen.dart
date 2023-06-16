@@ -215,6 +215,8 @@ class _SignUpScreenState extends State<SignUpScreen> {
                         width: 158,
                         text: 'Sign up',
                         fontSize: 20,
+                        fontColor: kWhiteColor,
+                        backgroundColor: kGreenColor,
                       ),
                       const SizedBox(
                         height: 10,

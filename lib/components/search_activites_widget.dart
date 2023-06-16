@@ -8,6 +8,7 @@ class ActivityWidget extends StatelessWidget {
     this.url,
     this.activityLocation,
     this.price,
+    this.elevatedButton,
     this.onPressed,
     this.text,
     this.icon,
@@ -17,6 +18,7 @@ class ActivityWidget extends StatelessWidget {
   final String? activityName;
   final String? duration;
   final String? activityLocation;
+  final ElevatedButton? elevatedButton;
   final String? price;
   final String? text;
   final IconData? icon;
