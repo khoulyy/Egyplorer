@@ -67,8 +67,9 @@ class GetStartedScreen extends StatelessWidget {
               width: 269,
               text: 'Get Started',
               fontSize: 22,
-              fontColor: kWhiteColor,
-              backgroundColor: kGreenColor,
+              fontColor: kGreenColor,
+              backgroundColor: kWhiteColor,
+              fontWeight: FontWeight.bold,
             ),
             const Spacer(
               flex: 3,
