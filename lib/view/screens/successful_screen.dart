@@ -12,6 +12,7 @@ class SucssesfulScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Lottie.asset(
+              frameRate: FrameRate(120),
               'assets/images/congrats.json',
               repeat: false,
             ),
