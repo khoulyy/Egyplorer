@@ -20,3 +20,4 @@ An Egyptian Excursion App for UK Citizens.
 - Google Navigation Bar: https://pub.dev/packages/google_nav_bar
 - Modal Progress Hud: https://pub.dev/packages/modal_progress_hud_nsn
 - Google Sign In: https://pub.dev/packages/google_sign_in
+- Lottie: https://pub.dev/packages/lottie
