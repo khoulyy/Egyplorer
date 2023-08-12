@@ -1,5 +1,5 @@
 # Egyplorer
-An Egyptian Excursion App for UK Citizens.
+A full stack Excursion App.
 
 ## Technologies
 ### Frontend:
@@ -7,9 +7,7 @@ An Egyptian Excursion App for UK Citizens.
 - Material UI
 
 ### Backend:
-- Firebase
-- Firebase Firestore
-- Firebase Cloud Storage
+- Firebase(NoSQL)
 
 ## Packages:
 - Font Awesome Flutter: https://pub.dev/packages/font_awesome_flutter
